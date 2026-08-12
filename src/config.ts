@@ -83,7 +83,18 @@
         "Executed battery system tests on thermal runaway, vibrations, adhesives, and environmental sealing tests. Required instrumentation and formal documentation (risk analyses, test plans, journals, and reports)",
         "Programmed and operated a Tormach CNC mill using conversational machining and 3D toolpaths. Documented machining procedures for future co-ops",
       ],
-      link: "/experience/CorvusEnergy",
+      link: "/experience/CorvusEnergyMech",
+    },
+    {
+      company: "Corvus Energy",
+      title: "Test Engineering Co-op Student",
+      dateRange: "Mar 2026 - Aug 2026",
+      image: "/experience/corvus/CorvusLogo.png",
+      bullets: [
+        "",
+        "",
+      ],
+      link: "/experience/CorvusEnergyTest",
     },
     {
       company: "UBC ThunderBikes",
