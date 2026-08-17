@@ -1,7 +1,7 @@
 ---
 company: "Corvus Energy - Prototyping Team"
 title: "Mechanical Engineering Co-op Student"
-image: "/experience/corvus/CorvusLogo.png"
+image: "/experience/corvusMech/CorvusLogo.png"
 dateRange: "January 2024 – April 2024"
 location: "Richmond, BC"
 skills:
@@ -40,7 +40,7 @@ Additionally, I used both BambuLab FDM printers and resin printers to create pro
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto items-center js-gallery">
   <figure>
     <img
-      src="/experience/corvus/blockCloseup.jpg"
+      src="/experience/corvusMech/blockCloseup.jpg"
       alt="Block machined for environmental sealing test"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -50,7 +50,7 @@ Additionally, I used both BambuLab FDM printers and resin printers to create pro
   
   <figure>
     <img
-      src="/experience/corvus/mandrelPic.jpg"
+      src="/experience/corvusMech/mandrelPic.jpg"
       alt="PEM stud mandrel made using conversational machining"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -60,7 +60,7 @@ Additionally, I used both BambuLab FDM printers and resin printers to create pro
 
   <figure>
     <img
-      src="/experience/corvus/endBlocks.jpg"
+      src="/experience/corvusMech/endBlocks.jpg"
       alt="Blocks made for prototype battery"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -70,7 +70,7 @@ Additionally, I used both BambuLab FDM printers and resin printers to create pro
 
   <figure>
     <img
-      src="/experience/corvus/weldingBlocks.jpg"
+      src="/experience/corvusMech/weldingBlocks.jpg"
       alt="Wooden blocks for laser-welder fixturing"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -93,7 +93,7 @@ Unfortunately, I'm unable to talk about most of the work I did, due to IP issues
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto items-center js-gallery">
   <figure>
     <img
-      src="/experience/corvus/liftingClawCAD.jpg"
+      src="/experience/corvusMech/liftingClawCAD.jpg"
       alt="CAD of Lifting Jig"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -104,7 +104,7 @@ Unfortunately, I'm unable to talk about most of the work I did, due to IP issues
   
   <figure>
     <img
-      src="/experience/corvus/flyingWhale_blurred.png"
+      src="/experience/corvusMech/flyingWhale_blurred.png"
       alt="Lifting Jig in Action"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -127,7 +127,7 @@ I also assisted with thermal runaway testing and vibration testing. This involve
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto items-center js-gallery">
   <figure>
     <img
-      src="/experience/corvus/vibeTesting.jpg"
+      src="/experience/corvusMech/vibeTesting.jpg"
       alt="Vibration Testing a Prototype"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -138,7 +138,7 @@ I also assisted with thermal runaway testing and vibration testing. This involve
   
   <figure>
     <img
-      src="/experience/corvus/thermalRunawayTesting.jpg"
+      src="/experience/corvusMech/thermalRunawayTesting.jpg"
       alt="Aftermath of a Thermal Runaway Test"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -156,7 +156,7 @@ Throughout the course of my co-op, I performed several tests involving adhesives
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto items-center js-gallery">  
     <figure class="max-w-xl mx-auto">
     <img
-      src="/experience/corvus/acrylicCoupons.jpg"
+      src="/experience/corvusMech/acrylicCoupons.jpg"
       alt="Acrylic Wetout Coupons"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -167,7 +167,7 @@ Throughout the course of my co-op, I performed several tests involving adhesives
 
   <figure class="max-w-xl mx-auto">
     <img
-      src="/experience/corvus/fullColdPlateAdhesive.jpg"
+      src="/experience/corvusMech/fullColdPlateAdhesive.jpg"
       alt="CNC Adhesive Layout"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
               transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -178,7 +178,7 @@ Throughout the course of my co-op, I performed several tests involving adhesives
 
   <figure class="max-w-xl mx-auto">
     <img
-      src="/experience/corvus/sample10Cross.png"
+      src="/experience/corvusMech/sample10Cross.png"
       alt="Wetout Test with Different Joint Geometry"
       class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
               transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
@@ -198,7 +198,7 @@ This is a pneumatic press I designed to be used in the assembly of battery proto
 
 <figure class="max-w-xl mx-auto">
   <img
-    src="/experience/corvus/pressPic.png"
+    src="/experience/corvusMech/pressPic.png"
     alt="CAD of Pneumatic Press"
     class="rounded-xl shadow-lg"
   />

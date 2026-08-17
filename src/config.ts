@@ -62,6 +62,7 @@
       tallThumbnail: true,
       skills: ["Circuit Construction", "Debugging", "Analog and Digital Circuits"],
     },
+    /*
     {
       name: "Soldering Fume Extractor",
       description:
@@ -70,6 +71,7 @@
       image: "/projects/fumeExtractor/frontPic.jpg",
       skills: ["SolidWorks", "3D printing", "Soldering"],
     },
+    */
   ],
 
   experience: [
@@ -77,7 +79,7 @@
       company: "Corvus Energy",
       title: "Mechanical Engineering Co-op Student",
       dateRange: "Jan 2024 - Apr 2024",
-      image: "/experience/corvus/CorvusLogo.png",
+      image: "/experience/corvusMech/CorvusLogo.png",
       bullets: [
         "Designed and manufactured prototype parts for battery systems, involving extensive use of SolidWorks, machining, and 3D printing",
         "Executed battery system tests on thermal runaway, vibrations, adhesives, and environmental sealing tests. Required instrumentation and formal documentation (risk analyses, test plans, journals, and reports)",
@@ -89,10 +91,12 @@
       company: "Corvus Energy",
       title: "Test Engineering Co-op Student",
       dateRange: "Mar 2026 - Aug 2026",
-      image: "/experience/corvus/CorvusLogo.png",
+      image: "/experience/corvusTest/CorvusLogo.png",
       bullets: [
-        "",
-        "",
+        "Planned and executed system characterization and safety validation tests, keeping thorough documentaiton throughout.",
+        "Developped Python scripts to analyse large datasets, examining reliability of customer systems and predicting system failures.",
+        "Assited with product certification testing, documenting procedures and results, crucial for product approval.",
+        "Built hardware test setups and equipment under test, integrating sensors, relays, cooling systems and data aquisition.",
       ],
       link: "/experience/CorvusEnergyTest",
     },
@@ -112,13 +116,14 @@
 
   education: [
     {
-      school: "University of British Columbia, Faculty of Applied Science",
+      school: "University of British Columbia",
       degree: "Engineering Physics",
-      dateRange: "2023 - 2028",
+      dateRange: "2023 - 2029",
       achievements: [
-        "GPA: 89.6%",
-        "UBC Trek Excellence Scholarship Recipient",
-        "Dean's List (2023–2025)",
+        "GPA: 89.5%",
+        "UBC Trek Excellence Scholarship",
+        "Dean's List: 2024, 2025",
+        "Dean's Scholar: 2026",
         "Transcript Avaliable Upon Request",
       ],
     },
