@@ -50,7 +50,6 @@
         "Machined a phone stand from aluminum and brass using a mill, lathe, and water-jet cutter.",
       link: "/projects/PhoneStand",
       image: "/projects/smartphoneStand/PhoneStandNicePic.jpg",
-      tallThumbnail: true,
       skills: ["Machining", "Mill", "Lathe", "Water-jet Cutter", "Bench Grinder", "Fixturing"],
     },
     {
@@ -59,7 +58,6 @@
         "Built a discrete closed-loop motor speed controller through a mixed analog and digital circuit. Implemented speed sensing and an analog proportional-integral error amplifier.",
       link: "/projects/ENPH259MotorController",
       image: "/projects/ENPH259MotorController/MotorControllerThumbnail.jpg",
-      tallThumbnail: true,
       skills: ["Circuit Construction", "Debugging", "Analog and Digital Circuits"],
     },
     /*

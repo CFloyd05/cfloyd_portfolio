@@ -41,42 +41,27 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           : ""
                       }`}
                     >
-                      {/* Mobile: title, image, then text. sm and up: text left, image right. */}
-                      <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                        {/* TEXT COLUMN: index, title, description, skills */}
-                        <div class="flex-1 min-w-0 space-y-3">
-                          <div class="flex items-start justify-between gap-3">
-                            <div class="min-w-0">
-                              <span
-                                class="text-sm font-mono"
-                                style={{ color: siteConfig.accentColor }}
-                              >
-                                0{index + 1}
-                              </span>
-                              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                                {project.name}
-                              </h3>
-                            </div>
-                            {/* Arrow sits beside the title on mobile only */}
-                            {project.link && (
-                              <div class="sm:hidden">
-                                <ArrowIcon />
-                              </div>
-                            )}
-                          </div>
+                      {/* Header row: number + title on the left, arrow on the right (same as Experience cards) */}
+                      <div class="mb-4 flex items-start justify-between gap-3">
+                        <div class="min-w-0">
+                          <span
+                            class="text-sm font-mono"
+                            style={{ color: siteConfig.accentColor }}
+                          >
+                            0{index + 1}
+                          </span>
+                          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                            {project.name}
+                          </h3>
+                        </div>
+                        {project.link && <ArrowIcon />}
+                      </div>
 
-                          {/* Mobile-only image: between title and description */}
-                          {project.image && (
-                            <img
-                              src={project.image}
-                              alt={project.name}
-                              loading="lazy"
-                              class={`sm:hidden w-full rounded-lg border border-gray-200 shadow-sm object-cover ${
-                                project.tallThumbnail ? "h-64" : "h-48"
-                              }`}
-                            />
-                          )}
-
+                      {/* Body: same two-column grid as Experience cards.
+                          Narrow screens: one column, image first. sm and up: text left, image right. */}
+                      <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] gap-4 sm:gap-6 items-start">
+                        {/* TEXT: description + skills */}
+                        <div class="min-w-0 space-y-3">
                           {project.description && (
                             <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
                               {project.description}
@@ -100,21 +85,18 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           )}
                         </div>
 
-                        {/* RIGHT COLUMN (sm and up only): arrow + image */}
-                        <div class="hidden sm:flex sm:w-36 md:w-52 flex-shrink-0 flex-col items-end gap-3">
-                          {project.link && <ArrowIcon />}
-
-                          {project.image && (
+                        {/* IMAGE: never cropped. Fills the column width unless that would make it
+                            taller than the cap, in which case it shrinks to fit (portrait photos). */}
+                        {project.image && (
+                          <div class="order-first sm:order-none flex justify-center sm:justify-end">
                             <img
                               src={project.image}
                               alt={project.name}
                               loading="lazy"
-                              class={`w-full rounded-lg border border-gray-200 shadow-sm object-cover ${
-                                project.tallThumbnail ? "h-auto" : "h-32 md:h-36"
-                              }`}
+                              class="block w-auto max-w-full h-auto max-h-40 sm:max-h-80 rounded-lg border border-gray-200 shadow-sm"
                             />
-                          )}
-                        </div>
+                          </div>
+                        )}
                       </div>
                     </Component>
                   </div>
