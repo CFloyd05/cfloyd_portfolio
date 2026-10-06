@@ -41,7 +41,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           : ""
                       }`}
                     >
-                      {/* Mobile: image on top, text below. sm and up: text left, image right. */}
+                      {/* Mobile: title, image, then text. sm and up: text left, image right. */}
                       <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
                         {/* TEXT COLUMN: index, title, description, skills */}
                         <div class="flex-1 min-w-0 space-y-3">
@@ -64,6 +64,18 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                               </div>
                             )}
                           </div>
+
+                          {/* Mobile-only image: between title and description */}
+                          {project.image && (
+                            <img
+                              src={project.image}
+                              alt={project.name}
+                              loading="lazy"
+                              class={`sm:hidden w-full rounded-lg border border-gray-200 shadow-sm object-cover ${
+                                project.tallThumbnail ? "h-64" : "h-48"
+                              }`}
+                            />
+                          )}
 
                           {project.description && (
                             <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
@@ -88,13 +100,9 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           )}
                         </div>
 
-                        {/* IMAGE COLUMN: first on mobile, right side from sm up */}
-                        <div class="order-first sm:order-none sm:w-36 md:w-52 sm:flex-shrink-0 flex flex-col sm:items-end gap-3">
-                          {project.link && (
-                            <div class="hidden sm:block">
-                              <ArrowIcon />
-                            </div>
-                          )}
+                        {/* RIGHT COLUMN (sm and up only): arrow + image */}
+                        <div class="hidden sm:flex sm:w-36 md:w-52 flex-shrink-0 flex-col items-end gap-3">
+                          {project.link && <ArrowIcon />}
 
                           {project.image && (
                             <img
@@ -102,9 +110,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                               alt={project.name}
                               loading="lazy"
                               class={`w-full rounded-lg border border-gray-200 shadow-sm object-cover ${
-                                project.tallThumbnail
-                                  ? "h-64 sm:h-auto"
-                                  : "h-48 sm:h-32 md:h-36"
+                                project.tallThumbnail ? "h-auto" : "h-32 md:h-36"
                               }`}
                             />
                           )}
