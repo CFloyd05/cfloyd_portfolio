@@ -9,12 +9,12 @@
   social: {
     email: "connorbfloyd@gmail.com",
     linkedin: "https://www.linkedin.com/in/connorfloyd05",
-    github: "",
+    github: "https://github.com/CFloyd05",
     twitter: "",
   },
 
   aboutMe:
-    "A third year engineering physics student at the University of British Columbia with a passion for mechanical design and hands-on manufacturing. Experienced in CAD software, machining, and 3D printing. Seeking opportunities to apply my skills and contribute to innovative projects.",
+    "A fourth year engineering physics student at the University of British Columbia with a passion for mechanical design and hands-on manufacturing. Experienced in CAD software, machining, and 3D printing. Seeking opportunities to apply my skills and contribute to innovative projects.",
  
     skills: [
       "SolidWorks", 
@@ -77,8 +77,21 @@
   experience: [
     {
       company: "Corvus Energy",
+      title: "Test Engineering Co-op Student",
+      dateRange: "May 2026 - Aug 2026",
+      image: "/experience/corvusTest/CorvusLogo.png",
+      bullets: [
+        "Planned and executed system characterization and safety validation tests, keeping thorough documentation throughout.",
+        "Developed Python scripts to analyze large datasets, examining reliability of customer systems and predicting system failures.",
+        "Assisted with product certification testing, documenting procedures and results, crucial for product approval.",
+        "Built hardware test setups and equipment under test, integrating sensors, relays, cooling systems and data acquisition.",
+      ],
+      link: "/experience/CorvusEnergyTest",
+    },
+    {
+      company: "Corvus Energy",
       title: "Mechanical Engineering Co-op Student",
-      dateRange: "Jan 2024 - Apr 2024",
+      dateRange: "Jan 2025 - Apr 2025",
       image: "/experience/corvusMech/CorvusLogo.png",
       bullets: [
         "Designed and manufactured prototype parts for battery systems, involving extensive use of SolidWorks, machining, and 3D printing",
@@ -86,19 +99,6 @@
         "Programmed and operated a Tormach CNC mill using conversational machining and 3D toolpaths. Documented machining procedures for future co-ops",
       ],
       link: "/experience/CorvusEnergyMech",
-    },
-    {
-      company: "Corvus Energy",
-      title: "Test Engineering Co-op Student",
-      dateRange: "Mar 2026 - Aug 2026",
-      image: "/experience/corvusTest/CorvusLogo.png",
-      bullets: [
-        "Planned and executed system characterization and safety validation tests, keeping thorough documentaiton throughout.",
-        "Developped Python scripts to analyse large datasets, examining reliability of customer systems and predicting system failures.",
-        "Assited with product certification testing, documenting procedures and results, crucial for product approval.",
-        "Built hardware test setups and equipment under test, integrating sensors, relays, cooling systems and data aquisition.",
-      ],
-      link: "/experience/CorvusEnergyTest",
     },
     {
       company: "UBC ThunderBikes",
@@ -121,7 +121,7 @@
       dateRange: "2023 - 2029",
       achievements: [
         "GPA: 89.5%",
-        "UBC Trek Excellence Scholarship",
+        "2x UBC Trek Excellence Scholarship (2024, 2026)",
         "Dean's List: 2024, 2025",
         "Dean's Scholar: 2026",
         "Transcript Avaliable Upon Request",

@@ -2,8 +2,8 @@
 company: "Corvus Energy - Prototyping Team"
 title: "Mechanical Engineering Co-op Student"
 image: "/experience/corvusMech/CorvusLogo.png"
-dateRange: "January 2024 – April 2024"
-location: "Richmond, BC"
+dateRange: "January 2025 – April 2025"
+location: "Richmond, BC, Canada"
 skills:
   - SolidWorks
   - Prototyping

@@ -10,3 +10,11 @@ body {
   background-color: #f3f4f6;
   font-family: 'IBM Plex Mono', monospace;
 }
+
+hr {
+  border: none;
+  height: 4px;
+  background: #6b7280;
+  border-radius: 9999px;
+  margin: 2rem 0;
+}
