@@ -1,4 +1,6 @@
 ---
+import BackToTop from "./BackToTop.astro";
+
 export interface Props {
   title: string;
   description?: string;
@@ -249,4 +251,5 @@ const { title, description, image, imageCaption, skills, heroWidth } = Astro.pro
       });
     }
   </script>
+  <BackToTop />
 </main>
