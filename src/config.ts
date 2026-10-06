@@ -4,7 +4,7 @@
   description: "Portfolio website of Connor Floyd",
   accentColor: "#2295a9ff",
 
-  resumeUrl: "/Resume.pdf",
+  resumeUrl: "/resume.pdf",
 
   social: {
     email: "connorbfloyd@gmail.com",
