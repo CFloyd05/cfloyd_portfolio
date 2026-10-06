@@ -15,31 +15,13 @@ const { company, title, dateRange, location, image, heroWidth, imageCaption, ski
 
 <main class="bg-gray-50 min-h-screen w-full text-gray-900 relative">
 
-  <a href="/" class="back-home" aria-label="Back to homepage" onclick="sessionStorage.setItem('restore-home-scroll','1')">← Return to Homepage</a>
+  <a
+    href="/"
+    class="absolute top-5 left-6 sm:left-10 md:left-16 text-gray-700 font-medium underline underline-offset-4 decoration-gray-400 hover:text-black hover:decoration-black transition-colors"
+    aria-label="Back to homepage"
+    onclick="sessionStorage.setItem('restore-home-scroll','1')"
+  >Home</a>
   
-  <style>
-      .back-home {
-        position: absolute;
-        display: inline-flex;
-        top: 16px;
-        left: 16px;
-        z-index: 1000;
-
-        padding: 8px 12px;
-        border-radius: 10px;
-
-        text-decoration: none;
-        font-weight: 600;
-
-        background: rgba(255, 255, 255, 0.85);
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        backdrop-filter: blur(8px);
-      }
-
-      .back-home:hover {
-        transform: translateY(-1px);
-      }
-  </style>
 
   <section class="px-6 sm:px-10 md:px-16 lg:px-24 py-24 max-w-5xl mx-auto">
     <!-- Header -->

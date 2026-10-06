@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+import ArrowIcon from "./ArrowIcon.astro";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 ---
 
@@ -40,20 +41,28 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           : ""
                       }`}
                     >
-                      {/* Two-column layout inside card: left = text, right = icon+image */}
-                      <div class="flex gap-4 sm:gap-6">
-                        {/* LEFT COLUMN: index, title, description, skills */}
-                        <div class="flex-1 space-y-3">
-                          <div>
-                            <span
-                              class="text-sm font-mono"
-                              style={{ color: siteConfig.accentColor }}
-                            >
-                              0{index + 1}
-                            </span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                              {project.name}
-                            </h3>
+                      {/* Mobile: image on top, text below. sm and up: text left, image right. */}
+                      <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                        {/* TEXT COLUMN: index, title, description, skills */}
+                        <div class="flex-1 min-w-0 space-y-3">
+                          <div class="flex items-start justify-between gap-3">
+                            <div class="min-w-0">
+                              <span
+                                class="text-sm font-mono"
+                                style={{ color: siteConfig.accentColor }}
+                              >
+                                0{index + 1}
+                              </span>
+                              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                                {project.name}
+                              </h3>
+                            </div>
+                            {/* Arrow sits beside the title on mobile only */}
+                            {project.link && (
+                              <div class="sm:hidden">
+                                <ArrowIcon />
+                              </div>
+                            )}
                           </div>
 
                           {project.description && (
@@ -79,39 +88,25 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           )}
                         </div>
 
-                        {/* RIGHT COLUMN: icon (top) + image (below) */}
-                        <div class="w-28 sm:w-36 md:w-52 flex-shrink-0 flex flex-col items-end gap-3">
+                        {/* IMAGE COLUMN: first on mobile, right side from sm up */}
+                        <div class="order-first sm:order-none sm:w-36 md:w-52 sm:flex-shrink-0 flex flex-col sm:items-end gap-3">
                           {project.link && (
-                            <div class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full bg-gray-900 text-white flex items-center justify-center shadow-sm transition-all duration-300 group-hover:bg-gray-700">
-                              <svg
-                                class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M7 17L17 7M17 7H7M17 7V17"
-                                />
-                              </svg>
+                            <div class="hidden sm:block">
+                              <ArrowIcon />
                             </div>
                           )}
 
                           {project.image && (
-                            <div
-                              class={`md:w-52 w-full md:flex-shrink-0 flex justify-start md:justify-end self-start md:self-center mt-4 md:mt-0
-                              ${project.tallThumbnail ? "h-auto" : "h-40 md:h-36"}`}
-                            >
-                              <img
-                                src={project.image}
-                                alt={project.name}
-                                loading="lazy"
-                                class={`rounded-lg border border-gray-200 shadow-sm w-auto max-w-full
-                                  ${project.tallThumbnail ? "h-auto" : "h-full object-cover"}`}
-                              />
-                            </div>
+                            <img
+                              src={project.image}
+                              alt={project.name}
+                              loading="lazy"
+                              class={`w-full rounded-lg border border-gray-200 shadow-sm object-cover ${
+                                project.tallThumbnail
+                                  ? "h-64 sm:h-auto"
+                                  : "h-48 sm:h-32 md:h-36"
+                              }`}
+                            />
                           )}
                         </div>
                       </div>

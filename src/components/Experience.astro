@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+import ArrowIcon from "./ArrowIcon.astro";
 
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 ---
@@ -54,37 +55,23 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
                           : ""
                       }`}
                     >
-                      {/* Open-in-new-tab icon — now matching Projects */}
-                      {exp.link && (
-                        <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 
-            w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 
-            rounded-full bg-gray-900 text-white flex items-center justify-center shadow-sm 
-            transition-all duration-300 group-hover:bg-gray-700">
-  <svg
-    class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-      d="M7 17L17 7M17 7H7M17 7V17" />
-  </svg>
-</div>
-                      )}
-
-                      <div class="mb-4">
-                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
-                          {exp.title}
-                        </h3>
-                        <p
-                          class="text-base sm:text-lg"
-                          style={`color: ${siteConfig.accentColor}`}
-                        >
-                          {exp.company}
-                        </p>
-                        <p class="text-sm text-gray-500 mt-1">
-                          {exp.dateRange}
-                        </p>
+                      {/* Title row: text on the left, arrow on the right (never overlaps) */}
+                      <div class="mb-4 flex items-start justify-between gap-3">
+                        <div class="min-w-0">
+                          <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                            {exp.title}
+                          </h3>
+                          <p
+                            class="text-base sm:text-lg"
+                            style={`color: ${siteConfig.accentColor}`}
+                          >
+                            {exp.company}
+                          </p>
+                          <p class="text-sm text-gray-500 mt-1">
+                            {exp.dateRange}
+                          </p>
+                        </div>
+                        {exp.link && <ArrowIcon />}
                       </div>
 
                       <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1.3fr)_minmax(0,1.1fr)] gap-4 sm:gap-6 items-stretch">
