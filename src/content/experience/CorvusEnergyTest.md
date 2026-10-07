@@ -2,6 +2,7 @@
 company: "Corvus Energy - Test Team"
 title: "Test Engineering Co-op Student"
 image: "/experience/corvusTest/CorvusLogo.png"
+imageCaption: "Photo courtesy of Corvus Energy"
 dateRange: "May 2026 – August 2026"
 location: "Richmond, BC, Canada"
 skills:
