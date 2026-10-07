@@ -9,7 +9,7 @@ import { siteConfig } from "../config";
 >
   <svg
     aria-hidden="true"
-    class="absolute inset-0 -z-10 size-full stroke-gray-300 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    class="absolute inset-0 -z-10 size-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
   >
     <defs>
       <pattern
@@ -20,7 +20,16 @@ import { siteConfig } from "../config";
         height={200}
         patternUnits="userSpaceOnUse"
       >
-        <path d="M.5 200V.5H200" fill="none"></path>
+        {/* Drafting grid: 200px major squares split into 20px minor squares, in the accent colour.
+             Major lines run through the middle of the tile so the crosshair at their intersection isn't clipped. */}
+        <g fill="none" stroke={siteConfig.accentColor}>
+          {/* Minor lines (every 20px) */}
+          <path d="M0.5 0V200 M20.5 0V200 M40.5 0V200 M60.5 0V200 M80.5 0V200 M120.5 0V200 M140.5 0V200 M160.5 0V200 M180.5 0V200 M0 0.5H200 M0 20.5H200 M0 40.5H200 M0 60.5H200 M0 80.5H200 M0 120.5H200 M0 140.5H200 M0 160.5H200 M0 180.5H200" stroke-width="1" stroke-opacity="0.10" />
+          {/* Major lines (every 200px) */}
+          <path d="M100.5 0V200 M0 100.5H200" stroke-width="1" stroke-opacity="0.25" />
+          {/* Crosshair at each major intersection */}
+          <path d="M94.5 100.5H106.5 M100.5 94.5V106.5" stroke-width="1.5" stroke-opacity="0.6" />
+        </g>
       </pattern>
       <pattern
         id="engineering-symbols"
