@@ -7,15 +7,9 @@ import { siteConfig } from "../config";
   class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
-  <!-- Gradient overlay -->
-  <div
-    class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
-  >
-  </div>
   <svg
     aria-hidden="true"
-    class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    class="absolute inset-0 -z-10 size-full stroke-gray-300 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
   >
     <defs>
       <pattern
@@ -82,7 +76,7 @@ import { siteConfig } from "../config";
       fill="url(#engineering-symbols)"
       width="100%"
       height="100%"
-      opacity="0.2"></rect>
+      opacity="0.25"></rect>
     <rect
       fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
       width="100%"
@@ -308,7 +302,26 @@ import { siteConfig } from "../config";
   </div>
 </div>
 
+
+<script>
+  // Scale the background grid + symbol pattern up on large screens (e.g. 4K monitors),
+  // so the tile keeps roughly the same proportions it has at 1440px instead of
+  // shrinking to tiny, hair-thin symbols. At 1440px and below the scale is 1 (unchanged).
+  const patterns = document.querySelectorAll("#hero pattern");
+  const scalePattern = () => {
+    const s = Math.max(1, window.innerWidth / 1440);
+    patterns.forEach((p) => p.setAttribute("patternTransform", `scale(${s})`));
+  };
+  let frame = 0;
+  window.addEventListener("resize", () => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(scalePattern);
+  });
+  scalePattern();
+</script>
+
 <style>
+
   @keyframes fadeIn {
     from {
       opacity: 0;
