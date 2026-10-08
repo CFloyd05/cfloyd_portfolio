@@ -100,7 +100,7 @@
     },
     {
       company: "UBC ThunderBikes",
-      title: "Engineering Design Team Co-Captain",
+      title: "Engineering Design Team Captain",
       dateRange: "Sep 2023 - Present",
       image: "/experience/thunderBikes/TBikesLogo.png",
       bullets: [
