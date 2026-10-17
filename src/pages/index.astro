@@ -43,19 +43,64 @@ import "../styles/global.css";
 </html>
 
 <script>
-  window.addEventListener("beforeunload", () => {
-    sessionStorage.setItem("homepage-scroll", String(window.scrollY));
-  });
+  const KEY = "homepage-return";
 
-  window.addEventListener("DOMContentLoaded", () => {
-    const shouldRestore = sessionStorage.getItem("restore-home-scroll") === "1";
+  // Save on tap/click
+  document.addEventListener(
+    "click",
+    (e) => {
+      const link = (e.target as HTMLElement).closest("a");
+      const href = link?.getAttribute("href");
+      if (!link || !href?.startsWith("/")) return; // only links to this site's pages
+      sessionStorage.setItem(
+        KEY,
+        JSON.stringify({ href, offset: link.getBoundingClientRect().top, y: window.scrollY })
+      );
+    },
+    true
+  );
+
+  function restore() {
+    // Restore when coming back via the Home link, or via the browser back button / swipe
+    const viaHomeLink = sessionStorage.getItem("restore-home-scroll") === "1";
     sessionStorage.removeItem("restore-home-scroll");
+    const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+    const viaBack = nav?.type === "back_forward";
+    if (!viaHomeLink && !viaBack) return;
 
-    if (!shouldRestore) return;
+    const saved = JSON.parse(sessionStorage.getItem(KEY) ?? "null");
+    if (!saved) return;
 
-    const savedScroll = sessionStorage.getItem("homepage-scroll");
-    if (savedScroll !== null) {
-      window.scrollTo(0, parseInt(savedScroll, 10));
-    }
-  });
+    // Where the page needs to scroll to put the card back where it was on screen
+    const target = () => {
+      const card = document.querySelector(`a[href="${CSS.escape(saved.href)}"]`);
+      return card ? window.scrollY + card.getBoundingClientRect().top - saved.offset : saved.y;
+    };
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const behavior: ScrollBehavior = reduceMotion ? "auto" : "smooth";
+    const glide = () => window.scrollTo({ top: target(), behavior });
+
+    // Stop correcting as soon as the visitor scrolls themselves
+    let userScrolled = false;
+    const stop = () => (userScrolled = true);
+    ["wheel", "touchstart", "keydown"].forEach((ev) =>
+      window.addEventListener(ev, stop, { once: true, passive: true })
+    );
+
+    // Glide down once the page has laid out...
+    requestAnimationFrame(glide);
+
+    const correct = () => {
+      if (!userScrolled && Math.abs(window.scrollY - target()) > 2) glide();
+    };
+    setTimeout(correct, 1000);
+    window.addEventListener("load", () => setTimeout(correct, 300), { once: true });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", restore);
+  } else {
+    restore();
+  }
 </script>

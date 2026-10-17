@@ -43,7 +43,7 @@
         "Built a voice-controlled USB power hub using an ESP32 and a Raspberry Pi server. Designed switching circuitry and enclosure. Implemented messaging protocol and integrated with Google Assistant.",
       link: "/projects/SmartUsbHub",
       image: "/projects/smartUsbHub/usbThumbnail.jpg",
-      skills: ["Circuit Design", "Embeded Firmware", "ESP32", "Raspberry Pi", "Soldering", "CAD", "3D Printing"],
+      skills: ["Circuit Design", "Embedded Firmware", "ESP32", "Raspberry Pi", "Soldering", "CAD", "3D Printing"],
     },
     {
       name: "Machined Aluminum and Brass Phone Stand",
@@ -123,7 +123,7 @@
         "2x UBC Trek Excellence Scholarship (2024, 2026)",
         "Dean's List: 2024, 2025",
         "Dean's Scholar: 2026",
-        "Transcript Avaliable Upon Request",
+        "Transcript Available Upon Request",
       ],
     },
   ],
