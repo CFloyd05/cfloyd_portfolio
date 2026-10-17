@@ -1,6 +1,6 @@
 ---
 company: "UBC ThunderBikes"
-title: "Engineering Design Team Co-Captain"
+title: "Engineering Design Team Captain"
 image: "/experience/thunderBikes/bike.jpg"
 imageCaption: "The team's previous motorcycle project"
 dateRange: "Sept 2023 – Present"
@@ -17,7 +17,7 @@ skills:
 
 The UBC ThunderBikes is an engineering design team dedicated to building and racing electric motorcycles. We're excited to be competing in MotoStudent, taking place in 2027 in Spain. For this competition, we are building a brand new motorcycle from scratch.
 
-This is my third year on the team, and I am excited to be filling the role of co-captain. As co-captain, I oversee the mechanical and aerodynamics teams. I manage the day-to-day activities of the team and provide input and guidance to our designs.
+This is my fourth year on the team, and I am excited to be filling the role of Captain. As Captain, I oversee the team of 55+ member, and manage project timelines, the budget, and cross-team integration. I manage the day-to-day activities of the team and provide guidance to our designs.
 
 
 ## Previous Technical Work

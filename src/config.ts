@@ -1,6 +1,7 @@
 ﻿export const siteConfig = {
   name: "Connor Floyd",
   title: "UBC Engineering Physics Student",
+  subtitle: "Seeking Internships: May 2027 to August 2028, 3 to 16 Months",
   description: "Portfolio website of Connor Floyd",
   accentColor: "#2295a9ff",
 
@@ -76,7 +77,7 @@
     {
       company: "Corvus Energy",
       title: "Test Engineering Co-op Student",
-      dateRange: "May 2026 - Aug 2026",
+      dateRange: "May 2026 - Aug 2026 (4 Months)",
       image: "/experience/corvusTest/CorvusLogo.png",
       bullets: [
         "Planned and executed system characterization and safety validation tests, keeping thorough documentation throughout.",
@@ -89,7 +90,7 @@
     {
       company: "Corvus Energy",
       title: "Mechanical Engineering Co-op Student",
-      dateRange: "Jan 2025 - Apr 2025",
+      dateRange: "Jan 2025 - Apr 2025 (4 Months)",
       image: "/experience/corvusMech/CorvusLogo.png",
       bullets: [
         "Designed and manufactured prototype parts for battery systems, involving extensive use of SolidWorks, machining, and 3D printing",
@@ -100,7 +101,7 @@
     },
     {
       company: "UBC ThunderBikes",
-      title: "Engineering Design Team Co-Captain",
+      title: "Engineering Design Team Captain",
       dateRange: "Sep 2023 - Present",
       image: "/experience/thunderBikes/TBikesLogo.png",
       bullets: [
