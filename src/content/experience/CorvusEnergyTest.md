@@ -30,6 +30,8 @@ From May to August 2026, I worked on the test team at Corvus, supporting both th
 
 I supported product certification testing for four different class societies, documenting test procedures, deviations, and results in formal test journals. These tests focused on verifying the system's safety and performance.
 
+The tests were very succesful, and the system has since been awarded it's first type approval: [Press Release: Corvus Blue Whale NxtGen Energy Awarded DNV Type Approval](https://corvusenergy.com/news/corvus-blue-whale-nxtgen-energy-awarded-dnv-type-approval)
+
 #### Thermal Build
 
 I built a battery module with ~40 internal thermocouples to characterize a new cell type. This involved extensive communication and collaboration with the production team to modify existing processes, including robotic laser welding and the existing fixturing and jigs.
