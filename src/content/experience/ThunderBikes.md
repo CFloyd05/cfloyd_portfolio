@@ -30,7 +30,7 @@ portfolio:
     areas: ["a b c", "a d e"]
     images:
       - { src: "/experience/thunderBikes/bike.jpg", caption: "The team's previous motorcycle", area: a }
-      - { src: "/experience/thunderBikes/frameMounts.jpg", caption: "Subframe mounts (own design)", area: b }
+      - { src: "/experience/thunderBikes/frameMounts.jpg", caption: "Subframe mounts", area: b }
       - { src: "/experience/thunderBikes/frameMountFEA.jpg", caption: "FEA on frame mounting points", area: c, fit: contain }
       - { src: "/experience/thunderBikes/internalStructure.jpg", caption: "Battery case and subframe", area: d }
       - { src: "/experience/thunderBikes/hoseConnector.jpg", caption: "Machined cooling-hose connector", area: e }

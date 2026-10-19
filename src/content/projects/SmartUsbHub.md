@@ -19,7 +19,7 @@ portfolio:
     images:
       - { src: "/projects/smartUsbHub/usbThumbnail.jpg", caption: "The finished hub", area: a }
       - { src: "/projects/smartUsbHub/circuitCloseup.jpg", caption: "Hand-soldered board in enclosure", area: b }
-      - { src: "/projects/smartUsbHub/enclosureCAD.jpg", caption: "Enclosure (CAD)", area: c, fit: contain }
+      - { src: "/projects/smartUsbHub/enclosureCAD.jpg", caption: "Enclosure CAD", area: c, fit: contain }
   # Column 1: hardware; column 2: software; column 3: result and next steps
   columns:
     - items:

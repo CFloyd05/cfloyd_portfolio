@@ -30,7 +30,7 @@ portfolio:
     areas: ["a b c", "d e c"]
     images:
       - { src: "/experience/corvusMech/vibeTesting.jpg", caption: "Vibration testing a prototype", area: a }
-      - { src: "/experience/corvusMech/liftingClawCAD.jpg", caption: "Battery lifting jig (CAD)", area: b, fit: contain }
+      - { src: "/experience/corvusMech/liftingClawCAD.jpg", caption: "Battery lifting jig CAD", area: b, fit: contain }
       - { src: "/experience/corvusMech/flyingWhale_blurred.png", caption: "Lifting jig in use", area: c }
       - { src: "/experience/corvusMech/sample10Cross.png", caption: "Adhesive wetout, joint geometry test", area: d, position: "center 62%" }
       - { src: "/experience/corvusMech/fullColdPlateAdhesive.jpg", caption: "CNC adhesive layout from custom G-code", area: e }

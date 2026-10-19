@@ -21,7 +21,7 @@ portfolio:
     images:
       - { src: "/projects/ENPH253/253News.jpg", caption: "Image credit: CityNews Vancouver", area: a, position: "center 15%" }
       - { src: "/projects/ENPH253/253Cad.jpg", caption: "Full SolidWorks assembly", area: b, fit: contain }
-      - { src: "/projects/ENPH253/ENPH253ArmDrivetrain.jpg", caption: "Arm drivetrain (CAD)", area: c, fit: contain }
+      - { src: "/projects/ENPH253/ENPH253ArmDrivetrain.jpg", caption: "Arm drivetrain", area: c, fit: contain }
       - { src: "/projects/ENPH253/253IntakePickup.jpg", caption: "Intake picking up a pet", area: d }
   # Column 1: design and fabrication; column 2: arms and zipline; column 3: team integration and results
   columns:
