@@ -9,11 +9,55 @@ skills:
   - Test Planning, Documentation, and Execution
   - Building Equipment Under Test and Test Setups
   - Python Data-Analysis
+portfolio:
+  order: 1
+  layout: columns
+  section: "Experience"
+  title: "Test Engineering Co-op"
+  org: "Corvus Energy · Test Team"
+  date: "May 2026 – Aug 2026 · Richmond, BC"
+  logo: "/experience/corvusTest/CorvusLogo.png"
+  toc: "Corvus Energy"
+  summary: "Supported the certification and reliability teams on the test team: testing high-voltage marine battery systems, building test hardware, and writing Python tools to analyze data from customer vessels."
+  tags: ["Test Planning & Execution", "Data Acquisition", "LCR & Micro-Ohm Meters", "Thermocouples", "Python (Pandas, NumPy)"]
+  stats:
+    - { value: "−33%", label: "accelerated life-test cycle time, 6 h down to 4 h" }
+    - { value: "4", label: "class societies supported in certification testing" }
+  # Mosaic like the other pages: two photos on top, the graph across the bottom, the enclosure down the right
+  gallery:
+    columns: "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.3fr)"
+    rows: "160px 122px"
+    areas: ["a b c", "d d c"]
+    images:
+      - { src: "/experience/corvusTest/fourWireBlurred.jpg", caption: "Four-wire micro-ohm resistance test", area: a, position: "30% center" }
+      - { src: "/experience/corvusTest/thermalModuleBlurred.jpg", caption: "Thermocouple-instrumented module", area: b }
+      - { src: "/experience/corvusTest/thermalEnclosureBlurred.jpg", caption: "Insulated test enclosure", area: c }
+      # crop trims the grey label bands and axis lines so only the plotted data shows
+      - { src: "/experience/corvusTest/tempDataGraph_2.png", caption: "Temperature cycles counted by the fatigue calculator", area: d, crop: [10.2, 2.4, 31.7, 5.9] }
+  columns:
+    - heading: "System Tests"
+      items:
+        - "Measured power-path, contactor and fuse resistances with a four-wire micro-ohm meter and LCR meter"
+        - "Built a model predicting system capacitance from configuration, used as an EMC pre-check"
+        - "Simulated a cell over-temperature fault and timed the contactor response at the terminals with a DAQ; confirmed within spec"
+        - "Documented procedures, deviations and results for certification testing"
+    - heading: "Python Tools"
+      items:
+        - text: "Wrote a thermal-cycle fatigue calculator"
+          items:
+            - "Applies a modified Coffin-Manson equation to years of 40-channel temperature data"
+            - "Outputs a relative damage value for each customer system"
+            - "Compared against accelerated life tests to predict failures"
+            - "Already used to improve the accuracy of the team's accelerated life tests"
+        - "Wrote an availability analyzer that automates system availability checks from vessel logs"
+    - heading: "Test Hardware"
+      items:
+        - "Built an insulated thermal enclosure from aluminum extrusion and foam, with ducting to an air chiller; wired the ducting to a relay controlled by the battery system's fan output, so the system switched its own cooling"
+        - "Manufactured a thermocouple module, adapting laser-welding fixtures with the production team"
+        - "Wired, networked and commissioned a BMS controller computer, and built an EMC test stand"
+        - "Built five 4'×8' acoustic barriers for high-power electronics"
+  link: "/experience/CorvusEnergyTest"
 ---
-
-***
-Page in progress: Images coming soon
-***
 
 ## Who is Corvus Energy
 
@@ -37,9 +81,35 @@ The tests were very succesful, and the system has since been awarded it's first 
 
 I built a battery module with ~40 internal thermocouples to characterize a new cell type. This involved extensive communication and collaboration with the production team to modify existing processes, including robotic laser welding and the existing fixturing and jigs.
 
+<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-4xl mx-auto items-center js-gallery">
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/thermalModuleBlurred.jpg"
+      alt="Thermocouple Module for Thermal Characterization"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+            transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Thermocouple Module for Thermal Characterization"
+    />
+    <figcaption class="text-center text-md text-gray-500">Thermocouple Module for Thermal Characterization</figcaption>
+  </figure>
+</div>
+
 #### Capacitance and Resistance Characterization
 
 Using an LCR meter and a four-wire micro-ohm meter, I measured capacitances and resistances throughout the battery system. I measured power-path, contactor, and fuse resistances, and developed a model to predict system capacitance based on configuration details. The results helped the team better understand the system and validate design decisions, and served as a pre-check for EMC testing.
+
+<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-4xl mx-auto items-center js-gallery">
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/fourWireBlurred.jpg"
+      alt="Four-Wire Micro-Ohm Meter Test Set-up"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+            transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Four-Wire Micro-Ohm Meter Test Set-up"
+    />
+    <figcaption class="text-center text-md text-gray-500">Four-Wire Micro-Ohm Meter Test Set-up</figcaption>
+  </figure>
+</div>
 
 #### Safety Fault Reaction Time
 
@@ -52,9 +122,58 @@ To validate the system's safety response, I used a sensor breakout board to simu
 
 I wrote a Python tool that calculates system fatigue due to thermal cycling using a modified Coffin-Manson equation. It processes large amounts of raw temperature data (years of measurements across ~40 channels, logged every 30 minutes) and outputs a relative damage value for each customer system. These values can be compared to accelerated lifecycle tests to predict system failures and validate reliability estimates. The tool has already improved the accuracy of our accelerated lifecycle tests.
 
+<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-4xl mx-auto items-center js-gallery">
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/boltedConnectionGraph_2.png"
+      alt="Thermal Data from Accelerated Life-Cycle Testing"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+            transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Thermal Data from Accelerated Life-Cycle Testing"
+    />
+    <figcaption class="text-center text-md text-gray-500">Thermal Data from Accelerated Life-Cycle Testing</figcaption>
+  </figure>
+
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/tempDataGraphNoFiltering_2.png"
+      alt="Thermal Data from Customer Vessel, low filtering"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+            transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Thermal Data from Customer Vessel, low filtering"
+    />
+    <figcaption class="text-center text-md text-gray-500">Thermal Data from Customer Vessel, low filtering</figcaption>
+  </figure>
+
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/tempDataGraph_2.png"
+      alt="Thermal Data from Customer Vessel, high filtering"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+              transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Thermal Data from Customer Vessel, high filtering"
+    />
+    <figcaption class="text-center text-md text-gray-500">Thermal Data from Customer Vessel, high filtering</figcaption>
+  </figure>
+</div>
+
+
 #### System Availability Analyzer
 
 Using system logs from customer vessels, I wrote a script to calculate system availability. I automated the process as much as possible, making it quick for the reliability team to check different systems.
+
+<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-4xl mx-auto items-center js-gallery">
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/availabilityGraph_2.png"
+      alt="System Up-Time Graph"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+            transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="System Up-Time Graph"
+    />
+    <figcaption class="text-center text-md text-gray-500">System Up-Time Graph</figcaption>
+  </figure>
+</div>
 
 ### Test Setups
 
@@ -62,10 +181,82 @@ Using system logs from customer vessels, I wrote a script to calculate system av
 
 I built an enclosure from aluminum extrusions and insulating foam to speed up thermal cycling for an accelerated lifecycle test. I installed ducting leading to an air chiller, controlled by a relay tapped into the system fans. This allowed the enclosure to retain heat during the heating phase and circulate chilled air during the cooling phase, reducing both the system heating and cooling times. This resulted in an overall reduction in the thermal cycling time from 6 hours to 4 and will substantially increase the effectiveness of the accelerated lifecycle test over the coming months and years.
 
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto items-center js-gallery">  
+    <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/thermalEnclosureBlurred.jpg"
+      alt="Insulated Enclosure for Accelerated Life-Cycle Testing"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+            transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Insulated Enclosure for Accelerated Life-Cycle Testing"
+    />
+    <figcaption class="text-center text-md text-gray-500">Insulated Enclosure for Accelerated Life-Cycle Testing</figcaption>
+  </figure>
+
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/ductingBlurred.jpg"
+      alt="Insulated Enclosure Air-Chiller Ducting"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+              transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Insulated Enclosure Air-Chiller Ducting"
+    />
+    <figcaption class="text-center text-md text-gray-500">Insulated Enclosure Air-Chiller Ducting</figcaption>
+  </figure>
+</div>
+
+
 #### Acoustic Barriers
 
 I built five 4'x8' acoustic barriers to block noise from high-power electronics. Each barrier had frames and triangular bases built from 1x4s and 2x4s, with an acoustic insulation panel over top.
 
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto items-center js-gallery">  
+    <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/acousticBarrierSingleBlurred.jpg"
+      alt="Back view of acoustic barrier"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+            transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Back view of acoustic barrier"
+    />
+  </figure>
+
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/acousticBarriersBlurred.jpg"
+      alt="Five acoustic barriers"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+              transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="Five acoustic barriers"
+    />
+  </figure>
+</div>
+
+
 #### System Controller and Stand Build
 
 I assembled a system controller computer, which interfaces with the battery module and runs the BMS. This involved wiring, networking, installing custom operating systems, and going through the software commissioning process. I also built a stand to hold the controller at a specific height for EMC testing.
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto items-center js-gallery">  
+    <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/pcOnStandBlurred.jpg"
+      alt="System controller computer on EMC stand"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+            transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="System Controller on EMC Stand"
+    />
+    <figcaption class="text-center text-md text-gray-500">System Controller on EMC Stand</figcaption>
+  </figure>
+
+  <figure class="max-w-xl mx-auto">
+    <img
+      src="/experience/corvusTest/pcStandBlurred.jpg"
+      alt="EMC stand for system controller"
+      class="w-full h-auto object-cover rounded-lg border border-gray-300 shadow-sm cursor-pointer
+              transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
+      data-caption="EMC Stand"
+    />
+    <figcaption class="text-center text-md text-gray-500">EMC Stand</figcaption>
+  </figure>
+</div>

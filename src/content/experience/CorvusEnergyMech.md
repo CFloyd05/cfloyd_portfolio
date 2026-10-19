@@ -11,6 +11,35 @@ skills:
   - Machining
   - Documentation
   - Test Planning and Execution
+portfolio:
+  order: 2
+  section: "Experience"
+  title: "Mechanical Engineering Co-op"
+  org: "Corvus Energy · Prototyping Team"
+  date: "Jan 2025 – Apr 2025 · Richmond, BC"
+  logo: "/experience/corvusMech/CorvusLogo.png"
+  toc: "Corvus Energy"
+  summary: "Owned work from concept to finished prototype on the prototyping team: designing in SolidWorks, machining and printing parts, then building and testing marine battery systems."
+  tags: ["SolidWorks", "Machining", "Tormach CNC", "FDM & Resin Printing", "Mechanical Assembly", "Test Plans & Reports", "FEA"]
+  stats:
+    - { value: "15+", label: "projects completed in four months, with minimal supervision" }
+  gallery:
+    columns: "1.25fr 1.25fr 1fr"
+    rows: "180px 180px"
+    areas: ["a b c", "d e c"]
+    images:
+      - { src: "/experience/corvusMech/vibeTesting.jpg", caption: "Vibration testing a prototype", area: a }
+      - { src: "/experience/corvusMech/liftingClawCAD.jpg", caption: "Battery lifting jig (CAD)", area: b, fit: contain }
+      - { src: "/experience/corvusMech/flyingWhale_blurred.png", caption: "Lifting jig in use", area: c }
+      - { src: "/experience/corvusMech/sample10Cross.png", caption: "Adhesive wetout, joint geometry test", area: d, position: "center 62%" }
+      - { src: "/experience/corvusMech/fullColdPlateAdhesive.jpg", caption: "CNC adhesive layout from custom G-code", area: e }
+  highlights:
+    - "**Design:** Parts and assemblies in SolidWorks using large assemblies and parametric models, validated with FEA, with full manufacturing drawings"
+    - "**Manufacturing:** Tormach CNC mill (conversational machining and 3D toolpaths), CNC router, lathe and power tools; wrote a machining guide for future co-ops"
+    - "**Vibration-test prototype:** In a team of four, machined parts, wrote assembly procedures and instrumented the module; designed an adjustable mount to correct tolerance stack-up and reported the root cause"
+    - "**Short-circuit test:** Ran a battery short-circuit test from start to finish: wrote the test plan and safe work procedure, designed a remote actuation system, built and instrumented the module, ran the test and wrote the report"
+    - "**Lifting jig:** Extrusion and off-the-shelf parts, FEA at the weakest point, later adapted for the team's next two projects"
+  link: "/experience/CorvusEnergyMech"
 ---
 
 *Note:* A reference letter from my supervisor is available upon request.

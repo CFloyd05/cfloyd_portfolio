@@ -1,0 +1,110 @@
+---
+// Renders one experience/project from its `portfolio:` frontmatter.
+//   layout "full"    → header, stats/flow, photo gallery, highlights card (fills a sheet)
+//   layout "columns" → header, stats, then one card per column that fills the rest of the sheet
+//   layout "half"    → compact version; two of these share a sheet
+import PortfolioGallery from "./PortfolioGallery.astro";
+import PortfolioBullets from "./PortfolioBullets.astro";
+import { inline, displayUrl } from "./inline";
+import type { PortfolioEntry } from "./types";
+
+interface Props {
+  entry: PortfolioEntry;
+  href?: string; // absolute link to the full write-up
+}
+const { entry, href } = Astro.props;
+const layout = entry.layout ?? "full";
+---
+
+{
+  layout === "half" ? (
+    <div class="half">
+      <p class="label">{entry.section ?? "Project"}</p>
+      <h2 class="entry-title">{entry.title}</h2>
+      {entry.org && <p class="org">{entry.org}</p>}
+      <div class="bar" />
+      {entry.summary && <p class="summary" set:html={inline(entry.summary)} />}
+      {entry.tags && (
+        <div class="tags">
+          {entry.tags.map((t) => (
+            <span>{t}</span>
+          ))}
+        </div>
+      )}
+      <div class="half-body" style={{ gridTemplateColumns: entry.split ?? "1.15fr 1fr" }}>
+        {entry.gallery && <PortfolioGallery gallery={entry.gallery} />}
+        <div>
+          {entry.highlights && <PortfolioBullets items={entry.highlights} />}
+          {href && (
+            <p class="more">
+              <a class="foot-link" href={href} target="_blank" rel="noopener noreferrer">Full write-up: {displayUrl(href)}</a>
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  ) : (
+    <Fragment>
+      <div class="entry-head">
+        <div>
+          <h1 class="entry-title">{entry.title}</h1>
+          {entry.org && <p class="org">{entry.org}</p>}
+          {entry.date && <p class="date">{entry.date}</p>}
+          <div class="bar" />
+        </div>
+        {entry.logo && <img class="logo" src={entry.logo} alt="" />}
+      </div>
+
+      {entry.summary && <p class="summary" set:html={inline(entry.summary)} />}
+
+      {entry.tags && (
+        <div class="tags">
+          {entry.tags.map((t) => (
+            <span>{t}</span>
+          ))}
+        </div>
+      )}
+
+      {entry.stats && (
+        <div class="stats">
+          {entry.stats.map((s) => (
+            <div class="stat">
+              <b>{s.value}</b>
+              <span>{s.label}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {entry.flow && (
+        <div class="flow">
+          {entry.flow.map((step, i) => (
+            <Fragment>
+              {i > 0 && <em>→</em>}
+              <span>{step}</span>
+            </Fragment>
+          ))}
+        </div>
+      )}
+
+      {entry.gallery && <PortfolioGallery gallery={entry.gallery} />}
+
+      {layout === "columns" && entry.columns && (
+        <div class="columns">
+          {entry.columns.map((col) => (
+            <div class="card">
+              <h3>{col.heading}</h3>
+              <PortfolioBullets items={col.items} />
+            </div>
+          ))}
+        </div>
+      )}
+
+      {entry.highlights && (
+        <div class="card">
+          <PortfolioBullets items={entry.highlights} />
+        </div>
+      )}
+    </Fragment>
+  )
+}

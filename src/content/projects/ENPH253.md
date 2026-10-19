@@ -4,6 +4,31 @@ description: "Created an autonomous competition robot to rescue stuffed animals 
 image: "/projects/ENPH253/253News.jpg"
 imageCaption: "Our robot was featured on a local news station! Image credit: CityNews Vancouver"
 skills: ["SolidWorks", "Laser-Cutting", "3D Printing", "Machining"]
+portfolio:
+  order: 4
+  section: "Project"
+  title: "Autonomous Pet Rescue Robot"
+  org: "ENPH 253 Robotics Competition"
+  date: "May 2025 – Aug 2025"
+  toc: "ENPH 253"
+  summary: "Led mechanical design for an autonomous robotics competition. The robot navigated a course, located stuffed animals, and returned them to a safe zone."
+  tags: ["SolidWorks", "Laser-Cutting", "3D Printing", "Machining", "Rapid Prototyping"]
+  gallery:
+    columns: "repeat(6, 1fr)"
+    rows: "262px 232px"
+    areas: ["a a a a b b", "c c c d d d"]
+    images:
+      - { src: "/projects/ENPH253/253News.jpg", caption: "Image credit: CityNews Vancouver", area: a, position: "center 15%" }
+      - { src: "/projects/ENPH253/253Cad.jpg", caption: "Full SolidWorks assembly", area: b, fit: contain }
+      - { src: "/projects/ENPH253/ENPH253ArmDrivetrain.jpg", caption: "Arm drivetrain (CAD)", area: c, fit: contain }
+      - { src: "/projects/ENPH253/253IntakePickup.jpg", caption: "Intake picking up a pet", area: d }
+  highlights:
+    - "**Overview:** Created the full SolidWorks assembly, designing the chassis, drivetrain, arms, intake and zipline basket, then built, tested and refined each subsystem through 4+ iterations during the six-week competition"
+    - "**Arms:** One motor with a 4:1 gear reduction drives both arms through a central driveshaft; a toothed belt ties the intake angle to arm position, so no extra actuator"
+    - "**Iteration:** Switched from a belt to gears when the belt coupler limited the arms' range of motion"
+    - "**Zipline basket:** Rides on skateboard bearings, with torsion-spring arms released by a servo"
+    - "**Fabrication:** Laser-cut hardboard, acrylic and Delrin, lathe-turned aluminum shafts and PETG prints"
+  link: "/projects/ENPH253"
 ---
 
 ## Overview

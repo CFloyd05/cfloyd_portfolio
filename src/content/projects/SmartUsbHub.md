@@ -4,6 +4,28 @@ description: "A Google Assistant compatible USB hub for LED lights"
 image: "/projects/smartUsbHub/usbThumbnail.jpg"
 imageCaption: ""
 skills: ["Circuit Design", "Soldering", "CAD", "3D Printing"]
+portfolio:
+  order: 5
+  section: "Project"
+  title: "Smart USB Hub"
+  org: "Personal Project"
+  summary: "A voice-controlled hub that controls several USB LED lights from a single hub. Designed the switching circuit, firmware and enclosure, and set up the home-automation server that links it to Google Assistant."
+  tags: ["Circuit Design", "Soldering", "Embedded Firmware", "Raspberry Pi", "MQTT", "SolidWorks", "3D Printing"]
+  gallery:
+    columns: "2.2fr 1fr"
+    rows: "190px 190px"
+    areas: ["a b", "a c"]
+    images:
+      - { src: "/projects/smartUsbHub/usbThumbnail.jpg", caption: "The finished hub", area: a }
+      - { src: "/projects/smartUsbHub/circuitCloseup.jpg", caption: "Hand-soldered board in enclosure", area: b }
+      - { src: "/projects/smartUsbHub/enclosureCAD.jpg", caption: "Enclosure (CAD)", area: c, fit: contain }
+  highlights:
+    - "**Circuit:** Designed and soldered a low-side transistor switching board, including passthrough ports that sit between a light and its inline controller"
+    - "**Server:** Raspberry Pi running openHAB and an MQTT broker, bridged to Google Assistant through openHAB Cloud; publishes an on/off message to each light's MQTT topic when a voice command comes in"
+    - "**Firmware:** ESP32 subscribes to an MQTT topic per light and switches each port through the transistor circuit with its GPIO pins; reconnects on its own after any outage"
+    - "**Enclosure:** Two-part SolidWorks design, 3D printed, with heat-set inserts and standoffs for electronics"
+    - "**Result:** Runs reliably as an everyday smart-home device"
+  link: "/projects/SmartUsbHub"
 ---
 
 ## Overview

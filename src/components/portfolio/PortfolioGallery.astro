@@ -1,0 +1,41 @@
+---
+import type { PortfolioGallery } from "./types";
+
+interface Props {
+  gallery: PortfolioGallery;
+}
+const { gallery } = Astro.props;
+const areas = gallery.areas?.map((row) => `'${row}'`).join(" ");
+// crop → CSS variables read by .gallery figure.cropped img in portfolio.css
+const cropVars = (c?: [number, number, number, number]) =>
+  c ? `--ct:${c[0]};--cr:${c[1]};--cb:${c[2]};--cl:${c[3]}` : undefined;
+const figClass = (fit?: string, crop?: unknown) =>
+  [fit === "contain" && "contain", crop && "cropped"].filter(Boolean).join(" ") || undefined;
+---
+
+<div
+  class="gallery"
+  style={{
+    gridTemplateColumns: gallery.columns,
+    gridTemplateRows: gallery.rows,
+    gridTemplateAreas: areas,
+  }}
+>
+  {
+    gallery.images.map((image) => (
+      <figure class={figClass(image.fit, image.crop)} style={`${image.area ? `grid-area:${image.area};` : ""}${cropVars(image.crop) ?? ""}`}>
+        <div
+          class={[image.src ? "frame" : "frame empty", image.aspect && "fixed", image.outline && "outlined"].filter(Boolean).join(" ")}
+          style={image.aspect ? `aspect-ratio:${image.aspect}` : undefined}
+        >
+          {image.src ? (
+            <img src={image.src} alt={image.caption ?? ""} style={{ objectPosition: image.position }} />
+          ) : (
+            <span>{image.placeholder ?? "Photo"}</span>
+          )}
+        </div>
+        {image.caption && <figcaption>{image.caption}</figcaption>}
+      </figure>
+    ))
+  }
+</div>

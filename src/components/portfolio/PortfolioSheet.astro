@@ -1,0 +1,23 @@
+---
+import { siteConfig } from "../../config";
+// One Letter-size page: top bar, your content (slot), and a footer with the page number.
+interface Props {
+  num: string; // "02"
+  section: string; // "Experience"
+  footHref?: string;
+  footText?: string;
+}
+const { num, section, footHref, footText } = Astro.props;
+---
+
+<section class="sheet">
+  <div class="sheet-top">
+    <span class="section">{num} — {section}</span>
+    <span class="owner">{siteConfig.name} · Engineering Portfolio</span>
+  </div>
+  <slot />
+  <div class="sheet-foot">
+    {footHref ? <a class="foot-link" href={footHref} target="_blank" rel="noopener noreferrer">{footText}</a> : <span>{footText}</span>}
+    <span class="num">{num}</span>
+  </div>
+</section>

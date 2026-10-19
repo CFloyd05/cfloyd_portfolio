@@ -28,6 +28,24 @@
       "Prototyping & Iteration",
     ],
 
+  // PDF portfolio cover (/portfolio). Kept separate so the printed blurb can differ from the website.
+  portfolio: {
+    about:
+      "A fourth year Engineering Physics student at UBC with a strong background in mechanical design, hands-on manufacturing, and testing. Completed two engineering internships at a marine battery company, and currently Captain of UBC ThunderBikes. A natural builder and a fast learner.",
+    skills: [
+      "SolidWorks",
+      "Machining",
+      "CNC (Conversational + CAM Toolpaths)",
+      "3D Printing",
+      "Test Planning & Execution",
+      "Instrumentation",
+      "Documentation & Technical Writing",
+      "Prototyping & Iteration",
+      "PCB & Circuit Design",
+      "Python & MATLAB",
+    ],
+  },
+
   projects: [
     {
       name: "Autonomous Pet Rescue Robot",

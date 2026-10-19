@@ -1,0 +1,106 @@
+---
+// Printable PDF portfolio. Not linked from the site and marked noindex, so visitors won't find it.
+//
+//   View:    npm run dev → http://localhost:4321/portfolio
+//   Export:  Chrome → Print → Save as PDF, Margins "None", "Background graphics" on
+//
+// Content comes from the `portfolio:` block in each file's frontmatter in src/content/
+// (see src/components/portfolio/types.ts for every field). Styling lives in src/styles/portfolio.css.
+import "../styles/global.css";
+import "../styles/portfolio.css";
+import { siteConfig } from "../config";
+import PortfolioCover from "../components/portfolio/PortfolioCover.astro";
+import PortfolioSheet from "../components/portfolio/PortfolioSheet.astro";
+import PortfolioEntry from "../components/portfolio/PortfolioEntry.astro";
+import { displayUrl } from "../components/portfolio/inline";
+import type { PortfolioEntry as Entry } from "../components/portfolio/types";
+
+export const prerender = true;
+
+const site = Astro.site ?? new URL("https://cfloyd.ca");
+const absolute = (link?: string) => (link ? new URL(link, site).href : undefined);
+
+// Gather every content file that has a portfolio block, in order
+const files = import.meta.glob<{ frontmatter: Record<string, any> }>("../content/**/*.md", { eager: true });
+const entries: Entry[] = Object.values(files)
+  .map((f) => f.frontmatter.portfolio && { title: f.frontmatter.title, ...f.frontmatter.portfolio })
+  .filter((e): e is Entry => Boolean(e) && typeof e.order === "number")
+  .sort((a, b) => a.order - b.order);
+
+// Lay entries out on sheets: each full/columns entry gets its own sheet,
+// and two consecutive "half" entries share one. The cover is sheet 01.
+type Sheet = { num: string; entries: Entry[] };
+const sheets: Sheet[] = [];
+for (let i = 0; i < entries.length; i++) {
+  const pair = entries[i].layout === "half" && entries[i + 1]?.layout === "half";
+  sheets.push({ num: "", entries: pair ? [entries[i], entries[++i]] : [entries[i]] });
+}
+sheets.forEach((s, i) => (s.num = String(i + 2).padStart(2, "0")));
+
+const contents = sheets.flatMap((s) =>
+  s.entries.map((e) => ({ num: s.num, title: e.title, subtitle: e.toc ?? e.org })),
+);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Becomes the default file name when you Save as PDF -->
+    <title>{siteConfig.name} - Portfolio</title>
+  </head>
+  <body class="portfolio" style={`--accent: ${siteConfig.accentColor}`}>
+    <PortfolioCover contents={contents} />
+
+    {
+      sheets.map((sheet) =>
+        sheet.entries.length === 1 ? (
+          <PortfolioSheet
+            num={sheet.num}
+            section={sheet.entries[0].section ?? "Project"}
+            footHref={absolute(sheet.entries[0].link)}
+            footText={
+              sheet.entries[0].link
+                ? `Full write-up: ${displayUrl(absolute(sheet.entries[0].link)!)}`
+                : displayUrl(site.href)
+            }
+          >
+            <PortfolioEntry entry={sheet.entries[0]} />
+          </PortfolioSheet>
+        ) : (
+          <PortfolioSheet
+            num={sheet.num}
+            section="More Projects"
+            footHref={site.href}
+            footText={`More on ${displayUrl(site.href)}`}
+          >
+            <PortfolioEntry entry={sheet.entries[0]} href={absolute(sheet.entries[0].link)} />
+            <div class="divider" />
+            <PortfolioEntry entry={sheet.entries[1]} href={absolute(sheet.entries[1].link)} />
+          </PortfolioSheet>
+        ),
+      )
+    }
+
+    <script>
+      // On screen only: outline any sheet whose content runs past the bottom edge (see portfolio.css)
+      const check = () =>
+        document.querySelectorAll<HTMLElement>(".sheet").forEach((sheet) => {
+          // content may not go past the sheet's bottom margin (when it does, the footer gets pushed down)
+          const bottom = sheet.getBoundingClientRect().bottom - parseFloat(getComputedStyle(sheet).paddingBottom);
+          const over = [...sheet.children].some((c) => c.getBoundingClientRect().bottom > bottom + 1);
+          sheet.classList.toggle("is-overflowing", over);
+        });
+      window.addEventListener("load", check);
+      document.fonts?.ready.then(check);
+    </script>
+  </body>
+</html>

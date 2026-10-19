@@ -5,6 +5,27 @@ image: "/projects/ENPH259MotorController/MotorControllerThumbnail.jpg"
 imageCaption: "Closed-loop RPM control using a mixed digital and analog servo loop"
 heroWidth: "max-w-md"
 skills: ["Circuit Construction", "Debugging", "Digital Logic", "Op-Amp Circuits", "Feedback Control"]
+portfolio:
+  order: 6
+  layout: half
+  section: "Project"
+  title: "Closed-Loop DC Motor Controller"
+  toc: "ENPH 259 lab course"
+  summary: "A discrete mixed-signal servo loop that holds a DC motor at a set RPM."
+  tags: ["Op-Amp Circuits", "Digital Logic", "Feedback Control", "Debugging"]
+  split: "0.47fr 1fr"
+  gallery:
+    columns: "1fr"
+    rows: "336px"
+    images:
+      - { src: "/projects/ENPH259MotorController/MotorControllerThumbnail.jpg", position: "center top" }
+  highlights:
+    - "**Sensing:** As the motor spins, a slotted disc and phototransistor generate a pulse train, which is counted and latched every measurement window"
+    - "**Conversion:** An 8-bit R-2R DAC turns the latched count into an analog voltage"
+    - "**Control:** An op-amp proportional-integral controller compares that voltage to an adjustable set-point voltage"
+    - "**Drive:** The controller's output sets the motor current through a BJT power stage"
+    - "**Result:** Successfully demonstrated set-point tracking and integral control"
+  link: "/projects/ENPH259MotorController"
 ---
 
 ## Overview

@@ -1,0 +1,82 @@
+---
+// Page 1 of the PDF. Name, contact, education and the hero art come from src/config.ts;
+// the About text and skills come from siteConfig.portfolio so they can differ from the website.
+import HeroArt from "../HeroArt.astro";
+import { siteConfig } from "../../config";
+import { displayUrl } from "./inline";
+
+interface Props {
+  contents: { num: string; title: string; subtitle?: string }[];
+}
+const { contents } = Astro.props;
+const { social } = siteConfig;
+const site = Astro.site?.href ?? "https://cfloyd.ca";
+---
+
+<section class="sheet cover">
+  <div class="cover-hero">
+    <HeroArt />
+    <div class="cover-top"><span class="section">01 — Engineering Portfolio</span></div>
+    <div class="cover-hero-text">
+      <h1 class="cover-name">{siteConfig.name}</h1>
+      <p class="cover-sub">{siteConfig.title}</p>
+      {siteConfig.subtitle && <p class="cover-sub2">{siteConfig.subtitle}</p>}
+      <p class="cover-contact">
+        {social.email && <a href={`mailto:${social.email}`}>{social.email}</a>}
+        <a href={site} target="_blank" rel="noopener noreferrer">{displayUrl(site)}</a>
+        {social.linkedin && <a href={social.linkedin} target="_blank" rel="noopener noreferrer">{displayUrl(social.linkedin)}</a>}
+      </p>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-row">
+      <div><h2>About Me</h2><div class="bar"></div></div>
+      <div class="indent">
+        <p class="about">{siteConfig.portfolio.about}</p>
+        <div class="skills">
+          {siteConfig.portfolio.skills.map((s) => <span>{s}</span>)}
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-row">
+      <div><h2>Education</h2><div class="bar"></div></div>
+      <div>
+        {
+          siteConfig.education.map((edu) => (
+            <div class="card edu">
+              <div class="edu-top">
+                <div>
+                  <h3>{edu.degree}</h3>
+                  <p class="org">{edu.school}</p>
+                </div>
+                <span class="date">{edu.dateRange}</span>
+              </div>
+              <ul class="bullets">
+                {edu.achievements.map((a) => (
+                  <li>{a}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="cover-row">
+      <div><h2>Inside</h2><div class="bar"></div></div>
+      <div class="toc indent">
+        {
+          contents.map((c) => (
+            <div>
+              <b>{c.num}</b>
+              <span>{c.title}</span>
+              {c.subtitle && <em>{c.subtitle}</em>}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

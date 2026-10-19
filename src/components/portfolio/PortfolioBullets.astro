@@ -1,0 +1,32 @@
+---
+// A bullet list. Each item is either text, or { text, items } for a bullet with sub-bullets.
+// **bold** works inside the text.
+import { inline } from "./inline";
+import type { Bullet } from "./types";
+
+interface Props {
+  items: Bullet[];
+}
+const { items } = Astro.props;
+---
+
+<ul class="bullets">
+  {
+    items.map((item) =>
+      typeof item === "string" ? (
+        <li><span set:html={inline(item)} /></li>
+      ) : (
+        <li>
+          <div>
+            <span set:html={inline(item.text)} />
+            <ul class="bullets sub">
+              {item.items.map((sub) => (
+                <li><span set:html={inline(sub)} /></li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ),
+    )
+  }
+</ul>

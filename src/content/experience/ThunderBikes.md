@@ -11,6 +11,35 @@ skills:
   - Team Collaboration
   - Welding
   - Machining
+portfolio:
+  order: 3
+  section: "Experience"
+  title: "Engineering Design Team Captain"
+  org: "UBC ThunderBikes"
+  date: "Sep 2023 – Present · Vancouver, BC"
+  logo: "/experience/thunderBikes/TBikesLogo.png"
+  summary: "UBC's electric motorcycle team, building a brand new bike for the MotoStudent competition in Spain. Now leading the team after two years on the mechanical sub-team."
+  tags: ["Leadership", "SolidWorks", "FEA & Hand Calcs", "MIG Welding", "Waterjet", "Machining"]
+  stats:
+    - { value: "55+", label: "members across mechanical, electrical, aero and business" }
+    - { value: "400 A · 110 V", label: "battery system, with a focus on HV safety" }
+    - { value: "2027", label: "MotoStudent competition in Spain" }
+  gallery:
+    columns: "1.5fr 1fr 1fr"
+    rows: "205px 205px"
+    areas: ["a b c", "a d e"]
+    images:
+      - { src: "/experience/thunderBikes/bike.jpg", caption: "The team's previous motorcycle", area: a }
+      - { src: "/experience/thunderBikes/frameMounts.jpg", caption: "Subframe mounts (own design)", area: b }
+      - { src: "/experience/thunderBikes/frameMountFEA.jpg", caption: "FEA on frame mounting points", area: c, fit: contain }
+      - { src: "/experience/thunderBikes/internalStructure.jpg", caption: "Battery case and subframe", area: d }
+      - { src: "/experience/thunderBikes/hoseConnector.jpg", caption: "Machined cooling-hose connector", area: e }
+  highlights:
+    - "**Leading the team:** Manage project timelines, the budget and integration between sub-teams, and review designs with a focus on the battery pack and high-voltage safety"
+    - "**Design:** Tubular subframe, subframe mounting points, battery casings and HV electronics mounts, designed for manufacturing and assembly"
+    - "**Analysis:** FEA backed by hand calculations, with loads from a MATLAB and Excel performance simulation of the bike"
+    - "**Fabrication:** Waterjet, MIG welding, angle grinders and press brake; machined parts and painted the bike"
+  link: "/experience/ThunderBikes"
 ---
 
 ## Overview

@@ -4,6 +4,26 @@ description: "Built as part of the UBC PHAS Student Machine Shop Course"
 image: "/projects/smartphoneStand/PhoneStandNicePic.jpg"
 imageCaption: ""
 skills: ["Machining", "Mill", "Lathe", "Water-Jet Cutter", "Bench Grinder"]
+portfolio:
+  order: 7
+  layout: half
+  section: "Project"
+  title: "Machined Aluminum & Brass Phone Stand"
+  org: "UBC PHAS Student Machine Shop Course"
+  toc: "Machine shop course"
+  summary: "An adjustable phone stand machined from aluminum and brass."
+  tags: ["Mill", "Lathe", "Water-Jet Cutter", "Bench Grinder"]
+  split: "1.15fr 1fr"
+  gallery:
+    columns: "1fr"
+    rows: "248px"
+    images:
+      - { src: "/projects/smartphoneStand/PhoneStandNicePic.jpg" }
+  highlights:
+    - "Waterjet-cut aluminum blanks, then milled to tolerance with flat-end, ball-nose and corner-radius end mills"
+    - "Ground cobalt-steel lathe tools from blanks on a bench grinder"
+    - "Turned brass shafts and nuts, with milled wrench flats and nylon washers for adjustable joint friction"
+  link: "/projects/PhoneStand"
 ---
 
 ## Overview
