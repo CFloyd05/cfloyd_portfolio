@@ -18,11 +18,11 @@ portfolio:
   date: "May 2026 – Aug 2026 · Richmond, BC"
   logo: "/experience/corvusTest/CorvusLogo.png"
   toc: "Corvus Energy"
-  summary: "Supported the certification and reliability teams on the test team: testing high-voltage marine battery systems, building test hardware, and writing Python tools to analyze data from customer vessels."
-  tags: ["Test Planning & Execution", "Data Acquisition", "LCR & Micro-Ohm Meters", "Thermocouples", "Python (Pandas, NumPy)"]
+  summary: "Supported the certification and reliability teams: testing high-voltage marine battery systems, building test hardware, and writing Python tools to analyze data from customer vessels."
+  tags: ["Test Planning & Execution", "Formal Documentation", "Data Acquisition", "LCR & Micro-Ohm Meters", "Python", "Mechanical Assembly"]
   stats:
-    - { value: "−33%", label: "accelerated life-test cycle time, 6 h down to 4 h" }
     - { value: "4", label: "class societies supported in certification testing" }
+    - { value: "−33%", label: "accelerated life-test cycle time, 6 h down to 4 h" }
   # Mosaic like the other pages: two photos on top, the graph across the bottom, the enclosure down the right
   gallery:
     columns: "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.3fr)"
@@ -37,24 +37,22 @@ portfolio:
   columns:
     - heading: "System Tests"
       items:
-        - "Measured power-path, contactor and fuse resistances with a four-wire micro-ohm meter and LCR meter"
-        - "Built a model predicting system capacitance from configuration, used as an EMC pre-check"
-        - "Simulated a cell over-temperature fault and timed the contactor response at the terminals with a DAQ; confirmed within spec"
-        - "Documented procedures, deviations and results for certification testing"
+        - "Tested system over-temperature response. Simulated a cell over-temperature fault and timed the contactor response with a DAQ; confirmed reaction time within spec"
+        - "Supported class certification tests, documenting procedures, deviations and results in formal test journals"
+        - "Measured system capacitance with LCR meter, built a model predicting capacitance from system configuration. Measured power-path, contactor and fuse resistances with a four-wire micro-ohm meter"
     - heading: "Python Tools"
       items:
         - text: "Wrote a thermal-cycle fatigue calculator"
           items:
-            - "Applies a modified Coffin-Manson equation to years of 40-channel temperature data"
-            - "Outputs a relative damage value for each customer system"
-            - "Compared against accelerated life tests to predict failures"
-            - "Already used to improve the accuracy of the team's accelerated life tests"
-        - "Wrote an availability analyzer that automates system availability checks from vessel logs"
+            - "Counts thermal cycles and their amplitudes in years of logged temperature data and applies a modified Coffin-Manson equation"
+            - "Outputs a relative damage value for each customer system, compared against accelerated life tests to predict failures"
+            - "Has already improved the accuracy of the team's accelerated life tests"
+        - "Wrote an availability analyzer to calculate system availability from vessel logs"
     - heading: "Test Hardware"
       items:
-        - "Built an insulated thermal enclosure from aluminum extrusion and foam, with ducting to an air chiller; wired the ducting to a relay controlled by the battery system's fan output, so the system switched its own cooling"
-        - "Manufactured a thermocouple module, adapting laser-welding fixtures with the production team"
-        - "Wired, networked and commissioned a BMS controller computer, and built an EMC test stand"
+        - "Built an insulated thermal enclosure for an accelerated lifecycle test, with ducting to an air chiller. Reduced thermal cycle time from 6 to 4 hours"
+        - "Manufactured a thermocouple battery module for thermal characterization of a new cell type"
+        - "Wired, networked, and commissioned a BMS computer, and built an EMC test stand"
         - "Built five 4'×8' acoustic barriers for high-power electronics"
   link: "/experience/CorvusEnergyTest"
 ---
@@ -120,7 +118,7 @@ To validate the system's safety response, I used a sensor breakout board to simu
 
 #### Thermal Cycle Fatigue Calculator
 
-I wrote a Python tool that calculates system fatigue due to thermal cycling using a modified Coffin-Manson equation. It processes large amounts of raw temperature data (years of measurements across ~40 channels, logged every 30 minutes) and outputs a relative damage value for each customer system. These values can be compared to accelerated lifecycle tests to predict system failures and validate reliability estimates. The tool has already improved the accuracy of our accelerated lifecycle tests.
+I wrote a Python tool that calculates system fatigue due to thermal cycling using a modified Coffin-Manson equation. It processes large amounts of raw temperature data (years of measurements across ~40 channels, logged every 30 minutes), finds the amplitude of each temperature cycle, and outputs a relative damage value for each customer system. These values can be compared to accelerated lifecycle tests to predict system failures and validate reliability estimates. The tool has already improved the accuracy of our accelerated lifecycle tests.
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-4xl mx-auto items-center js-gallery">
   <figure class="max-w-xl mx-auto">
@@ -142,7 +140,7 @@ I wrote a Python tool that calculates system fatigue due to thermal cycling usin
             transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
       data-caption="Thermal Data from Customer Vessel, low filtering"
     />
-    <figcaption class="text-center text-md text-gray-500">Thermal Data from Customer Vessel, low filtering</figcaption>
+    <figcaption class="text-center text-md text-gray-500">Thermal Data from Customer Vessel, Fine Detail</figcaption>
   </figure>
 
   <figure class="max-w-xl mx-auto">
@@ -153,7 +151,7 @@ I wrote a Python tool that calculates system fatigue due to thermal cycling usin
               transform transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-gray-400"
       data-caption="Thermal Data from Customer Vessel, high filtering"
     />
-    <figcaption class="text-center text-md text-gray-500">Thermal Data from Customer Vessel, high filtering</figcaption>
+    <figcaption class="text-center text-md text-gray-500">Thermal Data from Customer Vessel, Major Cycles Only</figcaption>
   </figure>
 </div>
 
@@ -161,6 +159,8 @@ I wrote a Python tool that calculates system fatigue due to thermal cycling usin
 #### System Availability Analyzer
 
 Using system logs from customer vessels, I wrote a script to calculate system availability. I automated the process as much as possible, making it quick for the reliability team to check different systems.
+
+I developped a criteria to quantify system up-time from the vessel logs, which was then used to calculate availability.
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-4xl mx-auto items-center js-gallery">
   <figure class="max-w-xl mx-auto">

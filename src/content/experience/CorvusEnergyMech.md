@@ -19,7 +19,7 @@ portfolio:
   date: "Jan 2025 – Apr 2025 · Richmond, BC"
   logo: "/experience/corvusMech/CorvusLogo.png"
   toc: "Corvus Energy"
-  summary: "Owned work from concept to finished prototype on the prototyping team: designing in SolidWorks, machining and printing parts, then building and testing marine battery systems."
+  summary: "Owned work from concept to finished prototype: designing in SolidWorks, machining and printing parts, then building and testing marine battery systems."
   tags: ["SolidWorks", "Machining", "Tormach CNC", "FDM & Resin Printing", "Mechanical Assembly", "Test Plans & Reports", "FEA"]
   stats:
     - { value: "15+", label: "projects completed in four months, with minimal supervision" }

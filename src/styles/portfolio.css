@@ -33,6 +33,12 @@
   --fs-columns: 10.8px; /* bullets on a "columns" page */
   --fs-small: 9px; /* tags, captions, top bar, footer */
   --fs-stat: 21px;
+
+  /* Slides the engineering symbols behind the cover (the grid lines stay put).
+     The pattern repeats every 540px, so useful values are about -540px to 540px.
+     0px 0px matches the website's homepage. */
+  --cover-symbols-x: 70px;
+  --cover-symbols-y: -312px;
 }
 
 /* ---------- screen vs print ---------- */
@@ -468,6 +474,9 @@ body.portfolio {
 /* Gear bodies are filled to hide the symbols behind them; match that fill to the page */
 .cover-hero .feature-gears [fill="white"] {
   fill: var(--sheet-bg);
+}
+.cover-hero #engineering-symbols {
+  transform: translate(var(--cover-symbols-x), var(--cover-symbols-y));
 }
 /* The gears turn slowly on the homepage; on the portfolio they stay still.
    The small gear is turned so a tooth points straight up; the big gear turns 13/48 as far
