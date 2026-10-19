@@ -40,7 +40,7 @@ export interface PortfolioEntry {
   stats?: { value: string; label: string }[];
   flow?: string[]; // a row of chips joined by arrows
   gallery?: PortfolioGallery;
-  columns?: { heading: string; items: Bullet[] }[]; // for layout: columns
+  columns?: { heading?: string; items: Bullet[] }[]; // for layout: columns; heading is optional
   highlights?: Bullet[]; // **bold** works inside these; use { text, items } for sub-bullets
   split?: string; // half layout: grid columns for gallery | text, e.g. "1.15fr 1fr"
   link?: string; // full write-up on the site, e.g. "/projects/ENPH253"

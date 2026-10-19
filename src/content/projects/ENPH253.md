@@ -6,6 +6,7 @@ imageCaption: "Our robot was featured on a local news station! Image credit: Cit
 skills: ["SolidWorks", "Laser-Cutting", "3D Printing", "Machining"]
 portfolio:
   order: 4
+  layout: columns
   section: "Project"
   title: "Autonomous Pet Rescue Robot"
   org: "ENPH 253 Robotics Competition"
@@ -22,12 +23,17 @@ portfolio:
       - { src: "/projects/ENPH253/253Cad.jpg", caption: "Full SolidWorks assembly", area: b, fit: contain }
       - { src: "/projects/ENPH253/ENPH253ArmDrivetrain.jpg", caption: "Arm drivetrain (CAD)", area: c, fit: contain }
       - { src: "/projects/ENPH253/253IntakePickup.jpg", caption: "Intake picking up a pet", area: d }
-  highlights:
-    - "**Overview:** Created the full SolidWorks assembly, designing the chassis, drivetrain, arms, intake and zipline basket, then built, tested and refined each subsystem through 4+ iterations during the six-week competition"
-    - "**Arms:** One motor with a 4:1 gear reduction drives both arms through a central driveshaft; a toothed belt ties the intake angle to arm position, so no extra actuator"
-    - "**Iteration:** Switched from a belt to gears when the belt coupler limited the arms' range of motion"
-    - "**Zipline basket:** Rides on skateboard bearings, with torsion-spring arms released by a servo"
-    - "**Fabrication:** Laser-cut hardboard, acrylic and Delrin, lathe-turned aluminum shafts and PETG prints"
+  # Column 1: design and fabrication; column 2: arms and zipline; column 3: team integration and results
+  columns:
+    - items:
+        - "**Mechanical design:** Designed the full robot in SolidWorks, managing tight size constraints and rapidly iterating on designs"
+        - "**Fabrication:** Built the majority of the robot: laser-cut hardboard, acrylic and Delrin, lathe-turned aluminum shafts and PETG prints"
+    - items:
+        - "**Arms and intake:** Drove both arms from one motor through a central driveshaft; a toothed belt ties the intake angle to arm position, to reduce the number of actuators"
+        - "**Zipline basket:** Designed a detachable basket that rides the zipline on skateboard bearings, with a torsion-spring zipline mechanism that folds compactly and deploys on a servo release"
+    - items:
+        - "**Team integration:** Worked with teammates to plan electronics mounting, sensor placement, and wiring, adapting the mechanical design to the team's needs"
+        - "**Results:** Consistently rescued 6 of 7 pets, on par with the top teams"
   link: "/projects/ENPH253"
 ---
 

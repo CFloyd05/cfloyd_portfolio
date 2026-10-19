@@ -6,6 +6,7 @@ imageCaption: ""
 skills: ["Circuit Design", "Soldering", "CAD", "3D Printing"]
 portfolio:
   order: 5
+  layout: columns
   section: "Project"
   title: "Smart USB Hub"
   org: "Personal Project"
@@ -19,12 +20,17 @@ portfolio:
       - { src: "/projects/smartUsbHub/usbThumbnail.jpg", caption: "The finished hub", area: a }
       - { src: "/projects/smartUsbHub/circuitCloseup.jpg", caption: "Hand-soldered board in enclosure", area: b }
       - { src: "/projects/smartUsbHub/enclosureCAD.jpg", caption: "Enclosure (CAD)", area: c, fit: contain }
-  highlights:
-    - "**Circuit:** Designed and soldered a low-side transistor switching board, including passthrough ports that sit between a light and its inline controller"
-    - "**Server:** Raspberry Pi running openHAB and an MQTT broker, bridged to Google Assistant through openHAB Cloud; publishes an on/off message to each light's MQTT topic when a voice command comes in"
-    - "**Firmware:** ESP32 subscribes to an MQTT topic per light and switches each port through the transistor circuit with its GPIO pins; reconnects on its own after any outage"
-    - "**Enclosure:** Two-part SolidWorks design, 3D printed, with heat-set inserts and standoffs for electronics"
-    - "**Result:** Runs reliably as an everyday smart-home device"
+  # Column 1: hardware; column 2: software; column 3: result and next steps
+  columns:
+    - items:
+        - "**Circuit:** Designed and soldered a low-side transistor switching board, including passthrough ports that sit between a light and its inline controller"
+        - "**Enclosure:** Two-part SolidWorks design, 3D printed, with heat-set inserts and standoffs for electronics"
+    - items:
+        - "**Server:** Raspberry Pi running openHAB and an MQTT broker, bridged to Google Assistant through openHAB Cloud; publishes an on/off message to each light's MQTT topic when a voice command comes in"
+        - "**Firmware:** ESP32 subscribes to an MQTT topic per light and switches each port through the transistor circuit with its GPIO pins; reconnects on its own after any outage"
+    - items:
+        - "**Result:** Runs reliably as an everyday smart-home device"
+        - "**Next steps:** Started a follow-up full-room lighting and sound system; designed and soldered an SMD MOSFET switching PCB, with the CAD design nearly finalized"
   link: "/projects/SmartUsbHub"
 ---
 

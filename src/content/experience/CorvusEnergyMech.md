@@ -13,6 +13,7 @@ skills:
   - Test Planning and Execution
 portfolio:
   order: 2
+  layout: columns
   section: "Experience"
   title: "Mechanical Engineering Co-op"
   org: "Corvus Energy · Prototyping Team"
@@ -33,12 +34,16 @@ portfolio:
       - { src: "/experience/corvusMech/flyingWhale_blurred.png", caption: "Lifting jig in use", area: c }
       - { src: "/experience/corvusMech/sample10Cross.png", caption: "Adhesive wetout, joint geometry test", area: d, position: "center 62%" }
       - { src: "/experience/corvusMech/fullColdPlateAdhesive.jpg", caption: "CNC adhesive layout from custom G-code", area: e }
-  highlights:
-    - "**Design:** Parts and assemblies in SolidWorks using large assemblies and parametric models, validated with FEA, with full manufacturing drawings"
-    - "**Manufacturing:** Tormach CNC mill (conversational machining and 3D toolpaths), CNC router, lathe and power tools; wrote a machining guide for future co-ops"
-    - "**Vibration-test prototype:** In a team of four, machined parts, wrote assembly procedures and instrumented the module; designed an adjustable mount to correct tolerance stack-up and reported the root cause"
-    - "**Short-circuit test:** Ran a battery short-circuit test from start to finish: wrote the test plan and safe work procedure, designed a remote actuation system, built and instrumented the module, ran the test and wrote the report"
-    - "**Lifting jig:** Extrusion and off-the-shelf parts, FEA at the weakest point, later adapted for the team's next two projects"
+  columns:
+  - items:
+      - "**Design:** Designed parts and large parametric assemblies in SolidWorks, validated with FEA, and produced full manufacturing drawings"
+      - "**Manufacturing:** Machined parts on a Tormach CNC mill, CNC router and lathe, and 3D printed on FDM and resin printers; wrote a machining guide for future co-ops"
+  - items:
+      - "**Short-circuit test:** Led a battery short-circuit test end to end: risk analysis, test plan and safe work procedure, a remote actuation system, module build and instrumentation, then ran the test and wrote the report"
+      - "**Adhesive testing:** Ran small- and full-scale adhesive wetout tests and characterized wetout across joint geometries"
+  - items:
+      - "**Vibration testing prototype:** Designed and machined parts, wrote assembly procedures and instrumented the module; supported testing at a third-party lab"
+      - "**Lifting jig:** Designed and built a hoisting jig for heavy prototypes from aluminum extrusion and off-the-shelf parts, checked the weakest point with FEA, machined custom parts, and later adapted it for the team's next two projects"
   link: "/experience/CorvusEnergyMech"
 ---
 

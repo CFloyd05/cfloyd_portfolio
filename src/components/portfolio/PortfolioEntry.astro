@@ -93,7 +93,7 @@ const layout = entry.layout ?? "full";
         <div class="columns">
           {entry.columns.map((col) => (
             <div class="card">
-              <h3>{col.heading}</h3>
+              {col.heading && <h3>{col.heading}</h3>}
               <PortfolioBullets items={col.items} />
             </div>
           ))}
