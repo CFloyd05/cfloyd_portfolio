@@ -40,7 +40,7 @@ portfolio:
         - "**Team leadership:** Lead 55+ members across mechanical, electrical, aero, and business sub-teams; manage timelines, the budget, and cross-team integration; write progress reports for team funders"
         - "**Design direction:** Guide the team's designs and reviews, with a focus on the battery pack and high-voltage safety"
     - items:
-        - "**Design:** Designed a tubular subframe, battery casings, and high-voltage electronics mounts in SolidWorks, with full engineering drawings"
+        - "**Design:** Designed battery casings, tubular subframe mounting points, and high-voltage electronics mounts in SolidWorks, with full engineering drawings"
         - "**Design for manufacturing:** Planned for jigging, weldability, tolerancing, and ease of assembly from the start of each design"
     - items:
         - "**Analysis:** Validated designs with FEA backed by hand calculations, using loads from a performance simulation of the bike"
