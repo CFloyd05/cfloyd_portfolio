@@ -10,9 +10,9 @@ portfolio:
   section: "Project"
   title: "Machined Aluminum & Brass Phone Stand"
   org: "UBC PHAS Student Machine Shop Course"
-  toc: "Machine shop course"
+  toc: "Machine Shop Course"
   summary: "An adjustable phone stand machined from aluminum and brass."
-  tags: ["Mill", "Lathe", "Water-Jet Cutter", "Bench Grinder"]
+  tags: ["Mill", "Lathe", "Waterjet Cutter", "Bench Grinder"]
   split: "1.15fr 1fr"
   gallery:
     columns: "1fr"
@@ -20,9 +20,9 @@ portfolio:
     images:
       - { src: "/projects/smartphoneStand/PhoneStandNicePic.jpg" }
   highlights:
-    - "Waterjet-cut aluminum blanks, then milled to tolerance with flat-end, ball-nose and corner-radius end mills"
-    - "Ground cobalt-steel lathe tools from blanks on a bench grinder"
-    - "Turned brass shafts and nuts, with milled wrench flats and nylon washers for adjustable joint friction"
+    - "**Milling:** Waterjet-cut aluminum blanks, then milled to tolerance with flat-end, ball-nose, and corner-radius end mills"
+    - "**Tool grinding:** Ground cobalt-steel lathe tools from blanks on a bench grinder"
+    - "**Turning:** Turned brass shafts and nuts, with milled wrench flats and nylon washers for adjustable joint friction"
   link: "/projects/PhoneStand"
 ---
 

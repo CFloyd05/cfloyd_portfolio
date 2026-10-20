@@ -51,7 +51,7 @@ const site = Astro.site?.href ?? "https://cfloyd.ca";
                   <h3>{edu.degree}</h3>
                   <p class="org">{edu.school}</p>
                 </div>
-                <span class="date">{edu.dateRange}</span>
+                <span class="date">{edu.dateRange.replace(/ - /g, " – ")}</span>
               </div>
               <ul class="bullets">
                 {edu.achievements.map((a) => (

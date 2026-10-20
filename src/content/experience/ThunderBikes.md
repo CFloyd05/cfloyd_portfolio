@@ -22,7 +22,7 @@ portfolio:
   summary: "UBC's electric motorcycle team, building a brand-new bike from scratch for the 2027 MotoStudent Electric competition in Spain. Now Captain, after two years on the mechanical sub-team."
   tags: ["Leadership", "SolidWorks", "FEA & Hand Calcs", "MIG Welding", "Waterjet", "Machining"]
   stats:
-    - { value: "55+", label: "members across mechanical, electrical, aero and business" }
+    - { value: "55+", label: "members across mechanical, electrical, aero, and business" }
     - { value: "400 A · 110 V", label: "battery system, with a focus on HV safety" }
   gallery:
     columns: "1.5fr 1fr 1fr"
@@ -37,14 +37,14 @@ portfolio:
   # Three columns of two, no column headings
   columns:
     - items:
-        - "**Team leadership:** Lead 55+ members across mechanical, electrical, aero and business sub-teams; manage timelines, the budget and cross-team integration. Write progress reports for team funders"
+        - "**Team leadership:** Lead 55+ members across mechanical, electrical, aero, and business sub-teams; manage timelines, the budget, and cross-team integration; write progress reports for team funders"
         - "**Design direction:** Guide the team's designs and reviews, with a focus on the battery pack and high-voltage safety"
     - items:
-        - "**Design:** Designed a tubular subframe, battery casings and high-voltage electronics mounts in SolidWorks, with full engineering drawings"
-        - "**Design for manufacturing:** Planned for jigging, weldability, tolerancing and ease of assembly from the start of each design"
+        - "**Design:** Designed a tubular subframe, battery casings, and high-voltage electronics mounts in SolidWorks, with full engineering drawings"
+        - "**Design for manufacturing:** Planned for jigging, weldability, tolerancing, and ease of assembly from the start of each design"
     - items:
         - "**Analysis:** Validated designs with FEA backed by hand calculations, using loads from a performance simulation of the bike"
-        - "**Fabrication:** Waterjet cutting, MIG welding, machining, angle grinding and press-brake forming"
+        - "**Fabrication:** Fabricated parts by waterjet cutting, MIG welding, machining, angle grinding, and press-brake forming"
   link: "/experience/ThunderBikes"
 ---
 
@@ -57,7 +57,7 @@ This is my fourth year on the team, and I am excited to be filling the role of C
 
 ## Previous Technical Work
 
-Prior to my time as co-captain, I was on the mechanical sub-team. I gained valuable skills, such as CAD, making engineering drawings, and collaboration within an engineering context.
+Prior to my time as Captain, I was on the mechanical sub-team. I gained valuable skills, such as CAD, making engineering drawings, and collaboration within an engineering context.
 
 I also did quite a bit of metalwork. I used equipment such as water-jet cutters, MIG welders, angle grinders, and press brakes. I learned to design for manufacturability and assembly, and include tolerancing in my designs.
 

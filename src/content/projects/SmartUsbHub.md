@@ -10,7 +10,7 @@ portfolio:
   section: "Project"
   title: "Smart USB Hub"
   org: "Personal Project"
-  summary: "A voice-controlled hub that controls several USB LED lights from a single hub. Designed the switching circuit, firmware and enclosure, and set up the home-automation server that links it to Google Assistant."
+  summary: "A voice-controlled hub that controls several USB LED lights from a single hub. Designed the switching circuit, firmware, and enclosure, and set up the home-automation server that links it to Google Assistant."
   tags: ["Circuit Design", "Soldering", "Embedded Firmware", "Raspberry Pi", "MQTT", "SolidWorks", "3D Printing"]
   gallery:
     columns: "2.2fr 1fr"
@@ -24,10 +24,10 @@ portfolio:
   columns:
     - items:
         - "**Circuit:** Designed and soldered a low-side transistor switching board, including passthrough ports that sit between a light and its inline controller"
-        - "**Enclosure:** Two-part SolidWorks design, 3D printed, with heat-set inserts and standoffs for electronics"
+        - "**Enclosure:** Designed a two-part enclosure in SolidWorks and 3D printed it, with heat-set inserts and standoffs for electronics"
     - items:
-        - "**Server:** Raspberry Pi running openHAB and an MQTT broker, bridged to Google Assistant through openHAB Cloud; publishes an on/off message to each light's MQTT topic when a voice command comes in"
-        - "**Firmware:** ESP32 subscribes to an MQTT topic per light and switches each port through the transistor circuit with its GPIO pins; reconnects on its own after any outage"
+        - "**Server:** Set up a Raspberry Pi running openHAB and an MQTT broker, bridged to Google Assistant through openHAB Cloud; it publishes an on/off message to each light's MQTT topic when a voice command comes in"
+        - "**Firmware:** Wrote ESP32 firmware that subscribes to an MQTT topic per light and switches each port through the transistor circuit with its GPIO pins; it reconnects on its own after any outage"
     - items:
         - "**Result:** Runs reliably as an everyday smart-home device"
         - "**Next steps:** Started a follow-up full-room lighting and sound system; designed and soldered an SMD MOSFET switching PCB, with the CAD design nearly finalized"

@@ -37,9 +37,9 @@ portfolio:
   columns:
     - heading: "System Tests"
       items:
-        - "Tested system over-temperature response. Simulated a cell over-temperature fault and timed the contactor response with a DAQ; confirmed reaction time within spec"
-        - "Supported class certification tests, documenting procedures, deviations and results in formal test journals"
-        - "Measured system capacitance with LCR meter, built a model predicting capacitance from system configuration. Measured power-path, contactor and fuse resistances with a four-wire micro-ohm meter"
+        - "Tested the system's over-temperature response: simulated a cell over-temperature fault and timed the contactor response with a DAQ; confirmed reaction time within spec"
+        - "Supported class certification tests, documenting procedures, deviations, and results in formal test journals"
+        - "Measured system capacitance with an LCR meter and built a model predicting capacitance from system configuration; measured power-path, contactor, and fuse resistances with a four-wire micro-ohm meter"
     - heading: "Python Tools"
       items:
         - text: "Wrote a thermal-cycle fatigue calculator"
@@ -50,7 +50,7 @@ portfolio:
         - "Wrote an availability analyzer to calculate system availability from vessel logs"
     - heading: "Test Hardware"
       items:
-        - "Built an insulated thermal enclosure for an accelerated lifecycle test, with ducting to an air chiller. Reduced thermal cycle time from 6 to 4 hours"
+        - "Built an insulated thermal enclosure for an accelerated life test, with ducting to an air chiller; reduced thermal cycle time from 6 to 4 hours"
         - "Manufactured a thermocouple battery module for thermal characterization of a new cell type"
         - "Wired, networked, and commissioned a BMS computer, and built an EMC test stand"
         - "Built five 4'×8' acoustic barriers for high-power electronics"
@@ -73,7 +73,7 @@ From May to August 2026, I worked on the test team at Corvus, supporting both th
 
 I supported product certification testing for four different class societies, documenting test procedures, deviations, and results in formal test journals. These tests focused on verifying the system's safety and performance.
 
-The tests were very succesful, and the system has since been awarded it's first type approval: [Press Release: Corvus Blue Whale NxtGen Energy Awarded DNV Type Approval](https://corvusenergy.com/news/corvus-blue-whale-nxtgen-energy-awarded-dnv-type-approval)
+The tests were very successful, and the system has since been awarded its first type approval: [Press Release: Corvus Blue Whale NxtGen Energy Awarded DNV Type Approval](https://corvusenergy.com/news/corvus-blue-whale-nxtgen-energy-awarded-dnv-type-approval)
 
 #### Thermal Build
 
@@ -160,7 +160,7 @@ I wrote a Python tool that calculates system fatigue due to thermal cycling usin
 
 Using system logs from customer vessels, I wrote a script to calculate system availability. I automated the process as much as possible, making it quick for the reliability team to check different systems.
 
-I developped a criteria to quantify system up-time from the vessel logs, which was then used to calculate availability.
+I developed a criteria to quantify system up-time from the vessel logs, which was then used to calculate availability.
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-4xl mx-auto items-center js-gallery">
   <figure class="max-w-xl mx-auto">

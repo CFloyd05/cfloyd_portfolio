@@ -13,7 +13,7 @@ portfolio:
   date: "May 2025 – Aug 2025"
   toc: "ENPH 253"
   summary: "Led mechanical design for an autonomous robotics competition. The robot navigated a course, located stuffed animals, and returned them to a safe zone."
-  tags: ["SolidWorks", "Laser-Cutting", "3D Printing", "Machining", "Rapid Prototyping"]
+  tags: ["SolidWorks", "Laser Cutting", "3D Printing", "Machining", "Rapid Prototyping"]
   gallery:
     columns: "repeat(6, 1fr)"
     rows: "262px 232px"
@@ -27,13 +27,13 @@ portfolio:
   columns:
     - items:
         - "**Mechanical design:** Designed the full robot in SolidWorks, managing tight size constraints and rapidly iterating on designs"
-        - "**Fabrication:** Built the majority of the robot: laser-cut hardboard, acrylic and Delrin, lathe-turned aluminum shafts and PETG prints"
+        - "**Fabrication:** Built the majority of the robot: laser-cut hardboard, acrylic, and Delrin; lathe-turned aluminum shafts; and PETG prints"
     - items:
         - "**Arms and intake:** Drove both arms from one motor through a central driveshaft; a toothed belt ties the intake angle to arm position, to reduce the number of actuators"
         - "**Zipline basket:** Designed a detachable basket that rides the zipline on skateboard bearings, with a torsion-spring zipline mechanism that folds compactly and deploys on a servo release"
     - items:
         - "**Team integration:** Worked with teammates to plan electronics mounting, sensor placement, and wiring, adapting the mechanical design to the team's needs"
-        - "**Results:** Consistently rescued 6 of 7 pets, on par with the top teams"
+        - "**Result:** Consistently rescued 6 of 7 pets, on par with the top teams"
   link: "/projects/ENPH253"
 ---
 

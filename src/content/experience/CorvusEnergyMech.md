@@ -37,7 +37,7 @@ portfolio:
   columns:
   - items:
       - "**Design:** Designed parts and large parametric assemblies in SolidWorks, validated with FEA, and produced full manufacturing drawings"
-      - "**Manufacturing:** Machined parts on a Tormach CNC mill, CNC router and lathe, and 3D printed on FDM and resin printers; wrote a machining guide for future co-ops"
+      - "**Manufacturing:** Machined parts on a Tormach CNC mill, CNC router, and lathe; 3D printed on FDM and resin printers; wrote a machining guide for future co-ops"
   - items:
       - "**Short-circuit test:** Led a battery short-circuit test end to end: risk analysis, test plan and safe work procedure, a remote actuation system, module build and instrumentation, then ran the test and wrote the report"
       - "**Adhesive testing:** Ran small- and full-scale adhesive wetout tests and characterized wetout across joint geometries"

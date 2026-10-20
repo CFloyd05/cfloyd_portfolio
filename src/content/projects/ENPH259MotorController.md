@@ -10,7 +10,7 @@ portfolio:
   layout: half
   section: "Project"
   title: "Closed-Loop DC Motor Controller"
-  toc: "ENPH 259 lab course"
+  toc: "ENPH 259 Lab Course"
   summary: "A discrete mixed-signal servo loop that holds a DC motor at a set RPM."
   tags: ["Op-Amp Circuits", "Digital Logic", "Feedback Control", "Debugging"]
   split: "0.47fr 1fr"
