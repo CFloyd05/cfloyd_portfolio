@@ -20,7 +20,7 @@ portfolio:
   date: "Jan 2025 – Apr 2025 · Richmond, BC"
   logo: "/experience/corvusMech/CorvusLogo.png"
   toc: "Corvus Energy"
-  summary: "Owned work from concept to finished prototype: designing in SolidWorks, machining and printing parts, then building and testing marine battery systems."
+  summary: "Owned work from concept to finished prototype for marine battery systems: designing in SolidWorks, machining and printing parts, then building and testing."
   tags: ["SolidWorks", "Machining", "Tormach CNC", "FDM & Resin Printing", "Mechanical Assembly", "Test Plans & Reports", "FEA"]
   stats:
     - { value: "15+", label: "projects completed in four months, with minimal supervision" }
@@ -40,10 +40,10 @@ portfolio:
       - "**Manufacturing:** Machined parts on a Tormach CNC mill, CNC router, and lathe; 3D printed on FDM and resin printers; wrote a machining guide for future co-ops"
   - items:
       - "**Short-circuit test:** Led a battery short-circuit test end to end: risk analysis, test plan and safe work procedure, a remote actuation system, module build and instrumentation, then ran the test and wrote the report"
-      - "**Adhesive testing:** Ran small- and full-scale adhesive wetout tests and characterized wetout across joint geometries"
+      - "**Adhesive testing:** Ran small- and full-scale adhesive wetout tests and characterized wetout across different joint geometries"
   - items:
       - "**Vibration testing prototype:** Designed and machined parts, wrote assembly procedures and instrumented the module; supported testing at a third-party lab"
-      - "**Lifting jig:** Designed and built a hoisting jig for heavy prototypes from aluminum extrusion and off-the-shelf parts, checked the weakest point with FEA, machined custom parts, and later adapted it for the team's next two projects"
+      - "**Lifting jig:** Designed and built a hoisting jig for heavy prototypes from aluminum extrusion and off-the-shelf parts, checked the weakest point with FEA, machined custom parts, and later adapted it for the team's next projects"
   link: "/experience/CorvusEnergyMech"
 ---
 

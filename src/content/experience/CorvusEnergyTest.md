@@ -38,8 +38,8 @@ portfolio:
     - heading: "System Tests"
       items:
         - "Tested the system's over-temperature response: simulated a cell over-temperature fault and timed the contactor response with a DAQ; confirmed reaction time within spec"
-        - "Supported class certification tests, documenting procedures, deviations, and results in formal test journals"
-        - "Measured system capacitance with an LCR meter and built a model predicting capacitance from system configuration; measured power-path, contactor, and fuse resistances with a four-wire micro-ohm meter"
+        - "Supported class certification tests: documenting procedures, deviations, and results in formal test journals"
+        - "Measured system capacitance with an LCR meter and built a model predicting capacitance from system configuration; characterized power-path, contactor, and fuse resistances with a four-wire micro-ohm meter"
     - heading: "Python Tools"
       items:
         - text: "Wrote a thermal-cycle fatigue calculator"
@@ -52,7 +52,7 @@ portfolio:
       items:
         - "Built an insulated thermal enclosure for an accelerated life test, with ducting to an air chiller; reduced thermal cycle time from 6 to 4 hours"
         - "Manufactured a thermocouple battery module for thermal characterization of a new cell type"
-        - "Wired, networked, and commissioned a BMS computer, and built an EMC test stand"
+        - "Wired, networked, and commissioned a BMS computer, and built an EMC test stand for it"
         - "Built five 4'×8' acoustic barriers for high-power electronics"
   link: "/experience/CorvusEnergyTest"
 ---

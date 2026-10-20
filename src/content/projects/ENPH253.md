@@ -30,7 +30,7 @@ portfolio:
         - "**Fabrication:** Built the majority of the robot: laser-cut hardboard, acrylic, and Delrin; lathe-turned aluminum shafts; and PETG prints"
     - items:
         - "**Arms and intake:** Drove both arms from one motor through a central driveshaft; a toothed belt ties the intake angle to arm position, to reduce the number of actuators"
-        - "**Zipline basket:** Designed a detachable basket that rides the zipline on skateboard bearings, with a torsion-spring zipline mechanism that folds compactly and deploys on a servo release"
+        - "**Zipline basket:** Designed a detachable basket that rides a zipline on skateboard bearings, with a torsion-spring zipline mechanism that folds compactly and deploys on a servo release"
     - items:
         - "**Team integration:** Worked with teammates to plan electronics mounting, sensor placement, and wiring, adapting the mechanical design to the team's needs"
         - "**Result:** Consistently rescued 6 of 7 pets, on par with the top teams"

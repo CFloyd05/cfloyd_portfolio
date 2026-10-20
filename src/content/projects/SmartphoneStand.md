@@ -9,7 +9,7 @@ portfolio:
   layout: half
   section: "Project"
   title: "Machined Aluminum & Brass Phone Stand"
-  org: "UBC PHAS Student Machine Shop Course"
+  org: "UBC PHAS Machine Shop Course"
   toc: "Machine Shop Course"
   summary: "An adjustable phone stand machined from aluminum and brass."
   tags: ["Mill", "Lathe", "Waterjet Cutter", "Bench Grinder"]

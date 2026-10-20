@@ -17,7 +17,7 @@ portfolio:
     rows: "190px 190px"
     areas: ["a b", "a c"]
     images:
-      - { src: "/projects/smartUsbHub/usbThumbnail.jpg", caption: "The finished hub", area: a }
+      - { src: "/projects/smartUsbHub/usbThumbnail.jpg", caption: "The finished USB hub", area: a }
       - { src: "/projects/smartUsbHub/circuitCloseup.jpg", caption: "Hand-soldered board in enclosure", area: b }
       - { src: "/projects/smartUsbHub/enclosureCAD.jpg", caption: "Enclosure CAD", area: c, fit: contain }
   # Column 1: hardware; column 2: software; column 3: result and next steps
@@ -26,7 +26,7 @@ portfolio:
         - "**Circuit:** Designed and soldered a low-side transistor switching board, including passthrough ports that sit between a light and its inline controller"
         - "**Enclosure:** Designed a two-part enclosure in SolidWorks and 3D printed it, with heat-set inserts and standoffs for electronics"
     - items:
-        - "**Server:** Set up a Raspberry Pi running openHAB and an MQTT broker, bridged to Google Assistant through openHAB Cloud; it publishes an on/off message to each light's MQTT topic when a voice command comes in"
+        - "**Server:** Set up a Raspberry Pi running openHAB and an MQTT broker, bridged to Google Assistant through openHAB Cloud; it publishes an on/off message to each light's MQTT topic"
         - "**Firmware:** Wrote ESP32 firmware that subscribes to an MQTT topic per light and switches each port through the transistor circuit with its GPIO pins; it reconnects on its own after any outage"
     - items:
         - "**Result:** Runs reliably as an everyday smart-home device"
