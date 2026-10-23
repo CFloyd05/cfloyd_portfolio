@@ -55,7 +55,7 @@ Corvus Energy is the world's leading supplier of battery energy storage systems 
 
 ## My Role
 
-As part of the prototyping team at Corvus Energy, I designed, built, and tested parts for their battery systems. I designed parts and assemblies in SolidWorks and produced manufacturing drawings and supporting documentation for my designs. I manufactured and assembled prototypes using CNC machines and shop tools. I used a Tormach CNC mill and 3D printers extensively for my projects. I executed battery system tests on thermal runaway, vibrations, adhesives, and environmental sealing. I wrote formal documentation such as risk analyses, test plans, test journals, and reports. Across my four-month term I owned work from ideation to finalized prototypes, completing 15 plus projects. I coordinated closely with other engineers while completing tasks with minimal supervision.
+As part of the prototyping team at Corvus Energy, I designed, built, and tested parts for their marine battery systems. I designed parts and assemblies in SolidWorks and produced manufacturing drawings and supporting documentation for my designs. I manufactured and assembled prototypes using CNC machines and shop tools. I used a Tormach CNC mill and 3D printers extensively for my projects. I executed battery system tests on thermal runaway, vibrations, adhesives, and environmental sealing. I wrote formal documentation such as risk analyses, test plans, test journals, and reports. Across my four-month term I owned work from ideation to finalized prototypes, completing 15 plus projects. I coordinated closely with other engineers while completing tasks with minimal supervision.
 
 
 ## Skills

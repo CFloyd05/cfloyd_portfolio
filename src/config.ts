@@ -15,7 +15,7 @@
   },
 
   aboutMe:
-    "A fourth year engineering physics student at the University of British Columbia with a passion for mechanical design and hands-on manufacturing. Experienced in CAD software, machining, and 3D printing. Seeking opportunities to apply my skills and contribute to innovative projects.",
+    "A fourth year engineering physics student at the University of British Columbia with a passion for mechanical design, testing, and hands-on manufacturing. Experienced in CAD software, machining, and 3D printing. Seeking opportunities to apply my skills and contribute to innovative projects.",
  
     skills: [
       "SolidWorks", 
