@@ -478,17 +478,19 @@ body.portfolio {
 .cover-hero #engineering-symbols {
   transform: translate(var(--cover-symbols-x), var(--cover-symbols-y));
 }
-/* The gears turn slowly on the homepage; on the portfolio they stay still.
-   The small gear is turned so a tooth points straight up; the big gear turns 13/48 as far
+/* The gears turn on screen, like the homepage. When printed they stop in a set pose:
+   the small gear has a tooth pointing straight up, and the big gear turns 13/48 as far
    the other way so the teeth stay meshed. */
-.cover-hero .gear {
-  animation: none !important;
-}
-.cover-hero .gear-small {
-  transform: rotate(-6.64deg);
-}
-.cover-hero .gear-big {
-  transform: rotate(1.8deg);
+@media print {
+  .cover-hero .gear {
+    animation: none !important;
+  }
+  .cover-hero .gear-small {
+    transform: rotate(-6.64deg);
+  }
+  .cover-hero .gear-big {
+    transform: rotate(1.8deg);
+  }
 }
 /* The homepage sizes the gears for screens; on paper they get a fixed width */
 .cover-hero .feature-gears {

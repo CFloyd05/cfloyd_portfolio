@@ -1,5 +1,5 @@
 ---
-// Printable PDF portfolio. Not linked from the site and marked noindex, so visitors won't find it.
+// Printable PDF portfolio, linked from the homepage by the button in PortfolioLink.astro.
 //
 //   View:    npm run dev → http://localhost:4321/portfolio
 //   Export:  Chrome → Print → Save as PDF, Margins "None", "Background graphics" on
@@ -46,7 +46,6 @@ const contents = sheets.flatMap((s) =>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
